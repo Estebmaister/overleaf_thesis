@@ -1,0 +1,85 @@
+% Universidad Simón Bolívar
+% Plantilla LaTeX para manuscritos (tesis y pasantías)
+% pregrado y postgrado
+%
+% Andrés M. Sajo-Castelli
+% Carlos Contreras
+%
+% 15 Abril 2015 -- primera versión pública
+% ...
+% 11 Mayo 2018 --- Se agrega bibliografía en castellano via babelbib
+%
+\documentclass[pregrado]{tesis-usb}
+
+% paquetes
+\usepackage[utf8]{inputenc}
+\usepackage{verbatim}
+\usepackage{acronym}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% \usepackage{hyperref}
+
+% estilo de las referencias
+\usepackage[fixlanguage]{babelbib-and}\selectbiblanguage{spanish}
+\usepackage{url}
+\bibliographystyle{babplain-lf}
+
+\autor{Esteban de Jesús Rafael Camargo Rodríguez}
+\usbid{11-10145}
+\titulo{Diseño de simulador de hornos de proceso}
+\tutor{Antonio Cavero}
+\usarcotutor
+\cotutor{Euler Jimenez} 
+\trabajo{Proyecto de grado}
+\coord{Ingeniería Química}
+\grado{Ingeniero Químico}
+\fecha{Mayo~de~2022}
+
+\autori{E. Camargo}
+\agno{2022}
+\fechadefensa{30~de~Mayo~de~2022}
+\carrera{Ing. Química}
+
+\programa{Nombre del Programa}
+\juradouno{Alejandro Requena}
+\juradodos{Sabrina D'Scipio \mbox{(Afiliaci\'on)}}
+\juradotres{Claudio Olivares}
+
+% Cambia comillas simple por comilla cerrada en ambiente verbatim 
+\makeatletter
+\let \@sverbatim \@verbatim
+\def \@verbatim {\@sverbatim \verbatimplus}
+{\catcode`'=13 \gdef \verbatimplus{\catcode`'=13 \chardef '=13 }} 
+\makeatother
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\input{dedicatoria}
+\input{agradecimientos}
+\begin{resumen}
+     El conocimiento al operar un equipo en cualquier planta de ingeniería siempre ha sido algo fundamental, pero hay ocaciones en que el conocimiento práctico se queda corto y no basta con saber manipularlo físicamente, si no también conocer los principios fundamentales detrás del funcionamiento del equipo. Los hornos de procesos en refinerías industriales son equipos asociados al corazón del proceso, y por tanto, requieren de fuertes bases para su correcta manipulación. Teniendo esto en cuenta se diseño este proyecto para generar una aplicación capaz de transmitir de manera eficiente los principios y consecuencias de la manipulación del horno de procesos. El objetivo de la herramienta es encargarse de simular las posibles interacciones de un operador con el equipo, con su uso los operadores podrán tener una idea de como cambiará el proceso dependiendo de las variables que decidan alterar, las cuales pueden ser el flujo del crudo, la apertura o cierre de los ductos de alimentación de aire o salida de gases de chimenea y por último la cantidad de combustible suministrado al horno. \\
+     
+     Palabras claves: Fire heater, Horno, Intercambiador, Simulador.
+\end{resumen}
+\tableofcontents
+\listoffigures
+\listoftables
+\useacronyms
+\input{notacion}
+
+\mainmatter
+\input{introduccion}
+\input{usodelaclase}
+\input{capitulo-4}
+\input{capitulo-5}
+\input{conclusiones}
+\nocite{*}
+\bibliography{referencias}
+\appendix
+\input{apendice-a.tex}
+\input{apendice-b.tex}
+
+\end{document}
