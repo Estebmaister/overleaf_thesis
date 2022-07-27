@@ -73,9 +73,9 @@
 %%   Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%   Right brace   \}     Tilde         \~}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\def\version{4.2}
+\def\version{1.2}
 \ProvidesClass{tesis-usb}
-              [2015/07/20 v\version Clase para documentos de LaTeX no oficial para libros de tesis USB]%---
+    [2015/07/20 v\version Clase para documentos de LaTeX no oficial para libros de tesis USB]%---
 
 %% definiciones de etiquetas para la autogeneraci'on de las p'aginas%---
 % BEGIN Extras from latex.ltx%---

@@ -32,7 +32,7 @@
 
 \programa{Nombre del Programa}
 \juradouno{Alejandro Requena}
-\juradodos{Sabrina D'Scipio \mbox{(Afiliaci\'on)}}
+\juradodos{Sabrina D'Scipio \mbox{(Afiliación)}}
 \juradotres{Claudio Olivares}
 
 % Cambia comillas simple por comilla cerrada en ambiente verbatim 
@@ -49,9 +49,13 @@
 \input{dedicatoria}
 \input{agradecimientos}
 \begin{resumen}
-     El conocimiento al operar un equipo en cualquier planta de ingeniería siempre ha sido algo fundamental, pero hay ocaciones en que el conocimiento práctico se queda corto y no basta con saber manipularlo físicamente, si no también conocer los principios fundamentales detrás del funcionamiento del equipo. Los hornos de procesos en refinerías industriales son equipos asociados al corazón del proceso, y por tanto, requieren de fuertes bases para su correcta manipulación. Teniendo esto en cuenta se diseño este proyecto para generar una aplicación capaz de transmitir de manera eficiente los principios y consecuencias de la manipulación del horno de procesos. El objetivo de la herramienta es encargarse de simular las posibles interacciones de un operador con el equipo, con su uso los operadores podrán tener una idea de como cambiará el proceso dependiendo de las variables que decidan alterar, las cuales pueden ser el flujo del crudo, la apertura o cierre de los ductos de alimentación de aire o salida de gases de chimenea y por último la cantidad de combustible suministrado al horno. \\
+     El conocimiento al operar un equipo en cualquier planta de ingeniería siempre ha sido algo fundamental, pero hay ocasiones en que el conocimiento práctico se queda corto y no basta con saber manipularlo físicamente, si no también conocer los principios fundamentales detrás del funcionamiento del equipo. Los hornos de procesos en refinerías industriales son equipos asociados al corazón del proceso, y por tanto, requieren de fuertes bases para su correcta manipulación, adicional a esto, la eficiencia en manipular este equipo repercute directamente en la eficiencia global del proceso, afectando la cantidad de residuos liberados al ambiente.
      
-     Palabras claves: Fire heater, Horno, Intercambiador, Simulador.
+     Teniendo esto en cuenta se diseño este proyecto para generar una aplicación capaz de transmitir de manera efectiva los principios y consecuencias de la manipulación del horno de procesos. 
+     
+     El objetivo de la herramienta es encargarse de simular las posibles interacciones de un operador con el equipo, representando diferentes estados asociados con las variables manipulables, con su uso los operadores podrán tener una idea de como cambiará el proceso dependiendo de las variables que decidan alterar, las cuales pueden ser el flujo del residuo (crudo), la apertura o cierre de los ductos de alimentación de aire (representado en exceso de aire) o salida de gases de chimenea y por último la cantidad de combustible suministrado al horno. \\
+     
+     Palabras claves: Horno, Fire heater, Combustión, Intercambiador, Simulador.
 \end{resumen}
 \tableofcontents
 \listoffigures
@@ -61,9 +65,13 @@
 
 \mainmatter
 \input{introduccion}
-\input{usodelaclase}
-\input{capitulo-4}
-\input{capitulo-5}
+\input{cap-1}
+\input{cap-2}
+\input{cap-3}
+\input{cap-4}
+\input{edu_usodelaclase}
+%\input{edu_acron}
+%\input{edu_comp}
 \input{conclusiones}
 \nocite{*}
 \bibliography{referencias}

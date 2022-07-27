@@ -1,11 +1,20 @@
-\chapter*{Introducci\'on}
+\chapter*{Introducción}
 
-En este documento se muestra el uso apropiado de la clase \texttt{clase-usb.cls} en \LaTeX~para la creaci\'on de libros de tabajo final en pregrado y postgrado seg\'un las normas del Decanato de Estudios Profesionales y Decanato de Estudios de Postgrado de la Universidad Sim\'on Bol\'ivar. Para m\'as detalle sobre las normas de ambos decanatos visitar las respectivas p\'aginas de internet: \texttt{www.profesionales.usb.ve} y \texttt{www.postgrado.usb.ve}.
-\par El archivo \texttt{tesis-usb.zip} contiene: el archivo de la clase ({\tt tesis-usb.cls}), dos documentos de muestra e instructivos para el uso de la clase (uno para pregrado y otro para postgrado) y las fuentes de ambos documentos instructivos en los archivos comprimidos \texttt{ejemplo-pregrado.zip} y \texttt{ejemplo-postgrado.zip}, respectivamente. 
-\par En el Cap\'itulo 1 de este documento se explica el uso correcto de la clase. En el Cap\'itulo 2 se expone una forma para generar la lista de acr\'onimos y la lista de simbolos. En el Cap\'itulo 3 se explica la forma de compilar el libro (y cualquier otro documento en general).
+\par En refinerías de petróleo crudo, plantas químicas y petroquímicas, los hornos representan los equipos que suministran más del 80\% de la totalidad de la energía requerida para los procesos de separación y conversión química de los productos. Desde este punto de vista, la eficiencia energética de cada horno es una variable crítica a optimizar, con el fin de reducir el consumo de combustibles quemados, minimizar las emisiones de gases de combustión que, finalmente, se traducen en menores costos operativos [1].
+
+\par Los \texttt{hornos de procesos} juegan un rol primordial en una refinería. Consumen altísimas cantidades de combustibles fósiles ({\tt miles de kilogramos por hora}) y emiten proporcionales cantidades de \ac{co2} a la atmósfera. Son equipos de alto costo que trabajan con llamas a muy altas temperaturas (\textgreater 2000 °C) y cuyas fallas suelen ser críticas para la economía de la refinería. Es importante destacar que el dióxido de carbono atmosférico promedio mundial en 2019 fue de 409,8 ppm, con un rango de incertidumbre de 0,1 ppm. Lo que indica que los niveles de dióxido de carbono resultaron los más altos de los últimos 800.000 años [2]. Teniendo como referencia las cifras del 2018 reportadas por la \ac{ONU}, 55,3 Gt\ac{co2}e (giga toneladas de \ac{co2} equivalente) [3], se puede apreciar el impacto significativo que esto genera sobre el medio ambiente. 
+
+\par Lamentablemente, no es posible automatizar la totalidad de la operación de un horno de procesos [4] puesto que no son equipos completamente herméticos como un intercambiador de calor o una columna de destilación. Esta condición, es decir, estar "abiertos a la atmósfera", hace recaer sobre los operadores de sala de control y de campo (la interfase humano-horno), la responsabilidad última sobre el proceso de combustión y el aprovechamiento del combustible.  
+
+\par Por experiencias prácticas, dentro de las refinerías se ha identificado que los operadores suelen manejar estos equipos con altos niveles de tiro y de exceso de aire, estas variables de operación están alejadas de las condiciones recomendadas al diseñar el horno, lo que conlleva mayores emisiones de CO2 al ambiente y además afecta la integridad mecánica del equipo. Los altos niveles de exceso de aire, provocados por altos niveles de tiro, traen consigo un mayor consumo del combustible para compensar el calor perdido al calentar el aire en exceso, lo que a su vez provoca alteraciones en las características de las llamas haciéndolas incidir directamente sobre los tubos de la sección radiante causando la coquización localizada de la carga dentro de los tubos. 
+
+\par En virtud de la dependencia de los hornos de proceso de la intervención continua y acertada de sus operadores se hace perentorio fomentar su capacitación como una manera de incrementar el desempeño y la eficiencia de estos equipos. 
+
+\par Por esta razón, se ha considerado necesario construir un simulador de hornos de procesos, con base en los estándares API 560 y API RP 535, para su utilización como herramienta práctica en la capacitación del personal operativo de las refinerías de petróleo. Esta herramienta permitiría, de una manera más didáctica, observar e interactuar con las variables fundamentales de control del horno, a saber, el tiro y el exceso de aire, para controlar los efectos de las operaciones alejadas de las condiciones de diseño.
+
+\par Este proyecto utilizará ecuaciones de balance de masa y transferencia de calor para representar las condiciones de operación en un modelo gráfico capaz de responder a diferentes estímulos en las variables. 
 \vfill
-\par Esta es la versi\'on \version~de la clase no oficial para trabajos de la Universidad Sim\'on Bol\'ivar, creada y mantenida por:\\
+\par Esta es la versión \version~del documento de tesis para la \ac{USB}, creada y mantenida por:\\
 \begin{tabular}{lc}
-MSc. Carlos Contreras & ccontreras@usb.ve \\
-MSc. Andr\'es Sajo-Castelli & asajo@usb.ve 
+Br. Esteban Camargo & 11-10145@usb.ve 
 \end{tabular}
