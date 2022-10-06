@@ -254,7 +254,7 @@ Con esta última ecuación quedan definidos todos los términos de las ecuacione
 \subsubsection{Factor de eficiencia del banco de tubos ($\alpha$)}
 
 Factor de eficiencia, $\alpha$, debido a que el banco de tubos no absorbe todo el calor radiado al plano frío, un factor de eficiencia de absorción puede ser usado para corregir esta área y dependerá del arreglo de tubos. El factor de eficiencia relativa se describe bajo las siguientes curvas:
-\par Para una fila de tubos simple frente a la pared refractaria, usar (Total One Row). Para dos filas de tubos frente a la pared refractaria, usar (Total Two Rows). Para hornos de doble llama, usar (DirectOneRow). Ver la Figura \ref{fig:alpha}.
+\par Para una fila de tubos simple frente a la pared refractaria, usar (Total One Row). Para dos filas de tubos frente a la pared refractaria, usar (Total Two Rows). Para hornos de doble llama, usar (Direct OneRow). Ver la Figura \ref{fig:alpha}.
 
 \begin{figure}[hbt]
 \begin{center}
@@ -284,7 +284,7 @@ $S_{tubo}$ = Espaciado de tubos. \\
 $L_{tubo}$ = Largo efectivo del tubo.
 
 \subsubsection{Factor global de transferencia radiante (F)}
-\par Debido a que el gas de combustión en el horno es un mal medio de radiación, la ecuación debe ser corregida usando un factor de transferencia radiante dependiente de la emisividad del gas y la relación del área refractaria de plano frío. Como el calor de radiación es reflejado de regreso al horno, por refracción, un horno con mayor relación de de superficie refractaria con respecto a la superficie de los tubos, absorberá mas calor. Como los tubos no asorben perfectamente el calor, las curvas esta basadas en superficies de tubos con absorción de 0.9. Un valor considerado como típico para superficies de metales oxidados. El factor de transferencia radiante final puede ser tomado de la siguiente curva (Figura \ref{fig:f}) ofrecida por Mekler \& Fairall\cite{bib:mekler}.
+\par Debido a que el gas de combustión en el horno es un mal medio de radiación, la ecuación debe ser corregida usando un factor de transferencia radiante dependiente de la emisividad del gas y la relación del área refractaria de plano frío. Como el calor de radiación es reflejado de regreso al horno, por refracción, un horno con mayor relación de de superficie refractaria con respecto a la superficie de los tubos, absorberá mas calor. Como los tubos no absorben perfectamente el calor, las curvas esta basadas en superficies de tubos con absorción de 0.9. Un valor considerado como típico para superficies de metales oxidados. El factor de transferencia radiante final puede ser tomado de la siguiente curva (Figura \ref{fig:f}) ofrecida por Mekler \& Fairall\cite{bib:mekler}.
 
 \begin{figure}[hbt]
 \begin{center}
@@ -300,7 +300,7 @@ $L_{tubo}$ = Largo efectivo del tubo.
 Aw = Ar - \alpha Acp
 \end{equation}
 
-\par El área refractaria total total, Ar, es el total del área refractaria expuesta a la sección radiante del horno. Cuando hay sección de escudo, que recibe radiación directa, el $\alpha$Acp para la sección radiante y para la sección de escudo se calculan de forma independiente y luego son sumados para calcular el factor de transferencia radiante.
+\par El área refractaria total, Ar, es el total del área refractaria expuesta a la sección radiante del horno. Cuando hay sección de escudo, que recibe radiación directa, el $\alpha$Acp para la sección radiante y para la sección de escudo se calculan de forma independiente y luego son sumados para calcular el factor de transferencia radiante.
 
 \par La ecuación para $Aw$ se convierte en:
 \begin{equation}
@@ -315,7 +315,7 @@ Aw/\alpha Acp = \frac{Aw}{(\alpha Acp)_{rad} + (\alpha Acp)_{esc}}
 \end{equation}
  
 \subsubsection{Emisividad de gases de combustión}
-\par La emisividad de un gas puede ser descrita por la curva presentada por Lobo y Evans\cite{bib:rad}, la temperatura de pared tiene solo un efecto menor. Por lo tanto, la emisividad puede ser correlacionada como una funcion del PL (\ref{eq:pl}) producido y la temperatura del gas de combustión, Tg. Variaciones en la temperatura de pared entre 600ªF y 1200 ªF causan una desviación menor al 1\% de estas curvas.
+\par La emisividad de un gas puede ser descrita por la curva presentada por Lobo y Evans\cite{bib:rad}, la temperatura de pared tiene solo un efecto menor. Por lo tanto, la emisividad puede ser correlacionada como una función del PL (\ref{eq:pl}) producido y la temperatura del gas de combustión, Tg. Variaciones en la temperatura de pared entre 600ªF y 1200 ªF causan una desviación menor al 1\% de estas curvas.
 
 \begin{figure}[hbt]
 \begin{center}
@@ -330,7 +330,7 @@ Aw/\alpha Acp = \frac{Aw}{(\alpha Acp)_{rad} + (\alpha Acp)_{esc}}
 PL = (PH_2O + PCO_2) * MBL
 \end{equation}
 
-\par Donde $PH_2O$ y $PCO_2$ son las presiones parciales del \ac{h2o} y \ac{co2} en el gas.
+\par Donde $PH_2O$ y $PCO_2$ son las presiones parciales del \ac{h2o} y \ac{co2} en el gas, y MBL en pies obtenido de la tabla \ref{tbl:mbl}.
 
 \subsubsection{\ac{mbl}}
 \par Para el cálculo de la \ac{mbl}, la distribución de los tubos debe ser tomada en cuenta. Si el horno es de forma rectangular con tubos en el centro, la \ac{mbl} será la mitad del área rectangular del horno. Longitudes del láser para otras configuraciones, como un horno cilíndrico con una disposición de tubos octagonal o tubos cruzados, deberá ser calculada con esas consideraciones.
@@ -338,6 +338,8 @@ PL = (PH_2O + PCO_2) * MBL
 \par La \ac{mbl} para hornos puede ser tomada, de acuerdo a Wimpress\cite{bib:wimpress} como se muestra en la Tabla \ref{tbl:mbl}.:
 
 \begin{table}
+\caption[Calculo del MBL]{Cálculo del MBL con dependencia de las dimensiones de la cámara de combustión}
+\label{tbl:mbl}
     \centering
     \begin{tabular}{c|c}
         Relación de dimensión  & Longitud de láser media \\
@@ -353,7 +355,7 @@ PL = (PH_2O + PCO_2) * MBL
         \hline
         \multicolumn{2}{c}{Para hornos cilíndricos verticales} \\
         \hline
-        Largo/Diámetro $<$ 2  & (((L/D)-1)*0.33 + 0.67)*D\\
+        Largo/Diámetro $<$ 2  & (($\frac{L}{D}$-1)*0.33 + 0.67)*D\\
         \hline
         Largo/Diámetro $\geq$ 2 & Diámetro\\
     \end{tabular}
