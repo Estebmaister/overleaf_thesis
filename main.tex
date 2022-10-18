@@ -19,8 +19,8 @@
 
 \autor{Esteban de Jesús Rafael Camargo Rodríguez}
 \usbid{11-10145}
-\titulo{Diseño de simulador de hornos de proceso}
-\tutor{Antonio Cavero}
+\titulo{Diseño de un simulador instruccional para ingenieros y operadores de hornos de proceso}
+\tutor{Antonio Cavero N.}
 \usarcotutor
 \cotutor{Euler Jimenez G.} 
 \trabajo{Proyecto de grado}
@@ -33,7 +33,7 @@
 \fechadefensa{30~de~Octubre~de~2022}
 \carrera{Ing. Química}
 
-\programa{Nombre del Programa}
+\programa{Nombre del Programa de Postgrado}
 \juradouno{Alejandro Requena}
 \juradodos{Sabrina D'Scipio \mbox{(Afiliación)}}
 \juradotres{Claudio Olivares}
@@ -52,17 +52,15 @@
 \input{dedicatoria}
 \input{agradecimientos}
 \begin{resumen}
-     El conocimiento al operar un equipo en cualquier planta de ingeniería siempre ha sido algo fundamental, pero hay ocasiones en que el conocimiento práctico se queda corto y no basta con saber manipularlo físicamente, si no también conocer los principios fundamentales detrás del funcionamiento del equipo. Los hornos de procesos en refinerías industriales son equipos asociados al corazón del proceso, y por tanto, requieren de fuertes bases para su correcta manipulación, adicional a esto, la eficiencia en manipular este equipo repercute directamente en la eficiencia global del proceso, afectando la cantidad de residuos liberados al ambiente.
-     
-     Teniendo esto en cuenta se diseño este proyecto para generar una aplicación capaz de transmitir de manera efectiva los principios y consecuencias de la manipulación del horno de procesos. 
-     
-     El objetivo de la herramienta es encargarse de simular las posibles interacciones de un operador con el equipo, representando diferentes estados asociados con las variables manipulables, con su uso los operadores podrán tener una idea de como cambiará el proceso dependiendo de las variables que decidan alterar, las cuales pueden ser el flujo del residuo (crudo), la apertura o cierre de los ductos de alimentación de aire (representado en exceso de aire) o salida de gases de chimenea y por último la cantidad de combustible suministrado al horno.\\
-     \vspace{15pt}\\
+    \par El conocimiento al operar un equipo en cualquier planta de ingeniería siempre ha sido algo fundamental, pero hay ocasiones en que el conocimiento práctico se queda corto y no basta con saber manipularlo físicamente, si no también conocer los principios fundamentales detrás del funcionamiento del equipo. Los hornos de procesos en refinerías industriales son equipos que aportan mas de un 80\% de la energía del proceso, y por tanto fundamentales, además son complejos de automatizar con sistemas de control por lo que requieren de fuertes bases para su correcta manipulación, adicional a esto, la eficiencia en manipular este equipo repercute directamente en la eficiencia global del proceso, afectando la cantidad de residuos liberados al ambiente.
+    \par Teniendo esto en cuenta se diseñó este proyecto para generar un simulador con interfaz web, capaz de transmitir de manera efectiva los principios y consecuencias del manejo del horno de procesos.
+    \par El objetivo de la herramienta es encargarse de simular las posibles interacciones de un operador con el equipo, representando diferentes estados asociados con las variables manipulables, con su uso los operadores podrán tener una referencia de como cambiará el proceso dependiendo de las variables que decidan alterar, las cuales pueden ser el flujo del residuo de vacío (crudo), las temperaturas de entrada o salida de este crudo, la abertura o cierre de los ductos de alimentación de aire (representado en exceso de aire) o salida de gases de chimenea, humedad relativa del ambiente, factores de ensuciamiento, pérdidas de calor al ambiente y por último los componentes del combustible suministrado al horno.\\
+     \vspace{10pt}\\
      Palabras claves: Horno de proceso, Fired heater, Combustión, Intercambiador, Simulador.
 \end{resumen}
 \tableofcontents
 \listoffigures
-%\listoftables
+\listoftables
 \useacronyms
 %\input{notacion}
 
@@ -77,7 +75,8 @@
 \nocite{*}
 \bibliography{referencias}
 \appendix
-\input{apendice-a.tex}
-%\input{apendice-b.tex}
+\input{apendice-a}
+\input{apendice-b}
+\input{apendice-c}
 
 \end{document}

@@ -527,7 +527,7 @@
 \renewcommand \thepart {\@Roman\c@part}
 \renewcommand \thechapter {\@arabic\c@chapter}%---
 \renewcommand \thechapter {\@arabic\c@chapter}%---
-\renewcommand \thechaptert {\@Roman\c@chaptert}%---
+\renewcommand \thechaptert {\@arabic\c@chaptert}%---
 \renewcommand \thesection {\thechapter.\@arabic\c@section}
 \renewcommand\thesubsection   {\thesection.\@arabic\c@subsection}
 \renewcommand\thesubsubsection{\thesubsection.\@arabic\c@subsubsection}
@@ -1082,48 +1082,65 @@
 \fi
 
 \newenvironment{resumen}%%---
-     {%---
-     \if@pregrado%--
-          \chapter*{\resumenname}%---
-          \vskip 1cm%---
-          \begin{singlespace}%---
-     %%%%%%%%%%%%%%%%%% FALTA HACER RESUMEN PARA PREGRADO
-     \else%--
-     \if@openright%---
-          \cleardoublepage%---
-     \else%---
-          \clearpage%---
-     \fi%---
-     \null%---
-          \addcontentsline{toc}{chapter}{\MakeTextUppercase{\resumenname}}%--- incluir resumen a la tabla de contenido
-          \begin{center}%---
-               \vskip -1.5cm \logousb \vskip 0.1cm%---
-               {\large {UNIVERSIDAD SIM\'ON BOL\'IVAR}\par%---
-               DECANATO DE ESTUDIOS DE POSTGRADO\par%---
-               COORDINACI\'ON DE \MakeTextUppercase{\@coord} \par%---
-               \MakeTextUppercase{\@programa} \par }%---
-               \vskip 0.8cm%---
-               {\large \textbf{ \MakeTextUppercase{\@titulo}} \par}%---
-               \vskip 0.5cm%---
-          \end{center}%---
-          \begin{flushleft}%---
-               { \normalsize \leftskip 9cm%---
-               \par \hspace{-1cm} Por: \@autor%---
-               \par \hspace{-1cm} Carn\'{e}: \@usbid %---
-               \par \hspace{-1cm} Tutor: \@tutor%---
-               \ifcotutor%---
-                    \par \hspace{-1cm} Cotutor: \@cotutor%---
-               \fi%---
-               \par \hspace{-1cm} \@fecha%---
-               \vskip 0.8cm }%---
-          \end{flushleft}%---
-          \begin{center}%---
-               {\large \textbf{RESUMEN}}%---
-          \end{center}%---
-          \begin{singlespace}%%---
-     \fi
-     }%%---
-     {\end{singlespace}}%---
+{%---
+    \if@openright%---
+        \cleardoublepage%---
+    \else%---
+        \clearpage%---
+    \fi%---
+    \null%---
+    \addcontentsline{toc}{chapter}{\MakeTextUppercase{\resumenname}}%--- incluir resumen a la tabla de contenido
+    \if@pregrado%--
+        \begin{center}%---
+            \vskip -1.5cm \logousb \vskip 0.1cm%--
+            {\large {UNIVERSIDAD SIM\'ON BOL\'IVAR}}\\%--
+            {\bfseries DECANATO DE ESTUDIOS PROFESIONALES}\par%--
+            \vskip 0.1cm
+            {\bfseries COORDINACI\'ON DE \MakeTextUppercase{\@coord}} \par%--
+            \vskip 0.8cm%--
+            {\large \textbf{ \MakeTextUppercase{\@titulo}} \par}%---
+            \vskip 0.5cm%---
+            \par \hspace{-1cm} PROYECTO DE GRADO%---
+            \par \hspace{-1cm} Realizado por: \@autor%---
+            \par \hspace{-1cm} Con la asesoria de: \@tutor%---
+            \ifcotutor%---
+                y \@cotutor%---
+            \fi%---
+            \vskip 0.8cm%---
+            {\large \textbf{RESUMEN}}%---
+        \end{center}%---
+        \begin{singlespace}%%---
+    \else%--
+        \begin{center}%---
+            \vskip -1.5cm \logousb \vskip 0.1cm%---
+            {\large {UNIVERSIDAD SIM\'ON BOL\'IVAR}\par%---
+            DECANATO DE ESTUDIOS DE POSTGRADO\par%---
+            COORDINACI\'ON DE \MakeTextUppercase{\@coord} \par%---
+            \MakeTextUppercase{\@programa} \par }%---
+            \vskip 0.8cm%---
+            {\large \textbf{ \MakeTextUppercase{\@titulo}} \par}%---
+            \vskip 0.5cm%---
+        \end{center}%---
+        \begin{flushleft}%---
+            { \normalsize \leftskip 9cm%---
+            \par \hspace{-1cm} Por: \@autor%---
+            \par \hspace{-1cm} Carn\'{e}: \@usbid %---
+            \par \hspace{-1cm} Tutor: \@tutor%---
+            \ifcotutor%---
+                \par \hspace{-1cm} Cotutor: \@cotutor%---
+            \fi%---
+            \par \hspace{-1cm} \@fecha%---
+            \vskip 0.8cm }%---
+        \end{flushleft}%---
+        \begin{center}%---
+            {\large \textbf{RESUMEN}}%---
+        \end{center}%---
+        \begin{singlespace}%%---
+    \fi
+    }%%---
+    {\end{singlespace}
+}%---
+
 
 \definecolor{c231f20}{RGB}{35,31,32}
 \newcommand{\logousb}[1][0.0333]{%

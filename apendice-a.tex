@@ -1,11 +1,33 @@
-\chapter{FIGURAS AMPLIADAS}\label{apx:img}
+\chapter{Métodos iterativos}
 
-\begin{figure}[ht]
-\includegraphics[scale=0.6,angle=0]{images/diagrama-algo}
-\caption[Diagrama Algoritmo Ampliado]{Diagrama detallado del algoritmo desarrollado para la simulación del horno de proceso}\label{img:dia-algo-full}
-\end{figure}
+\par En matemática computacional, un método iterativo trata de resolver un problema (como una ecuación o un sistema de ecuaciones) mediante aproximaciones sucesivas a la solución, empezando desde una estimación inicial. Esta aproximación contrasta con los métodos directos, que tratan de resolver el problema en un único intento (como resolver un sistema de ecuaciones Ax=b encontrando la inversa de la matriz A).
+\par A modo de referencia se describen los métodos de aproximación de utilizados a continuación.
 
-\begin{figure}[ht]
-\includegraphics[scale=0.6,angle=0]{images/diagrama-meca}
-\caption[Diagrama Mecánico Ampliado]{Diagrama descriptivo de la estructura mecánica del horno simulado}\label{img:dia-meca-full}
-\end{figure}
+\section{Newton Raphson}
+\par Es un algoritmo para encontrar aproximaciones de los valores iguales a ceros, o raíces, para una función de números reales. También puede ser usado para encontrar el máximo o mínimo de una función real, encontrando los puntos de inflexión, donde se iguala a cero su primera derivada, pero nuestro caso de enfoque será el mencionado inicialmente.
+\par El método de Newton es un método abierto, en el sentido de que no está garantizada su convergencia global. La única manera de alcanzar la convergencia es seleccionar un valor inicial (semilla) lo suficientemente cercano a la raíz de la función buscada. Así, se ha de comenzar la iteración con un valor razonablemente cercano al cero (también denominado punto de arranque o valor supuesto). La relativa cercanía del punto inicial a la raíz depende mucho de la naturaleza de la propia función; si ésta presenta múltiples puntos de inflexión o pendientes grandes en el entorno de la raíz, entonces las probabilidades de que el algoritmo diverja aumentan, lo cual exige seleccionar un valor supuesto cercano a la raíz. Una vez que se ha hecho esto, el método linealiza la función por la recta tangente en ese valor supuesto. La abscisa en el origen de dicha recta será, según el método, una mejor aproximación de la raíz que el valor anterior. Se realizarán sucesivas iteraciones hasta que el método haya convergido a la tolerancia deseada o se alcanza el numero límite de iteraciones. 
+\par Así como el valor inicial, el paso de cada iteración y la tolerancia, todas son variables que se ajustan a conveniencia en este método; los rangos de operación alcanzados por el simulador del horno dependerán en gran medida de estos valores.
+\par El método se basa en el desarrollo de Taylor de la función cuya raíz se quiere calcular. Al considerar la ecuación $f(x)=0$, y suponiendo que posee una y sólo una solución $\alpha\in[a,b]$. Se parte de un punto $x_0$ suficientemente cercano a dicha raíz, se escribe:
+\begin{equation*}
+f(\alpha) = f(x_0)
+    + (\alpha-x_0)f^\prime(x_0) 
+    + \frac{\alpha-x_0}{2}f^{\prime\prime}(x_0+\theta h)
+\end{equation*}
+\par con $0<\theta<1$, $h=\alpha-x_0$.
+\par Si se supone que $f^\prime(x)$ no se anula en $[a,b]$, y que la diferencia $\alpha-x_0$ es muy pequeña, el método de Newton-Raphson consiste en despreciar el sumando en $(\alpha-x_0)/2$ del desarrollo anterior, quedando con la aproximación:
+\begin{equation*}
+f(\alpha) \approx f(x_0) + (\alpha-x_0)f^\prime(x_0)
+\end{equation*}
+\par Como $\alpha$ es la solución de la ecuación $f(x)=0$, se tiene que $f(\alpha)=0$ y por tanto, de la expresión anterior se sigue que:
+\begin{equation*}
+f(x_0)+(\alpha-x_0)f^\prime(x_0) \approx 0
+\end{equation*}
+\par y despejando $\alpha$ resulta:
+\begin{equation*}
+\alpha \approx x_0 - f(x_0)f^\prime(x_0) = x_1
+\end{equation*}
+\par La implementación usada puede verse en los anexos donde se encuentra el código fuente del simulador.
+
+\section{Bisección}
+\par Se basa en el teorema del valor intermedio (TVI), el cual establece que toda función continua $f$ en un intervalo cerrado $[a,b]$ toma todos los valores que se hallan entre $f(a)$ y $f(b)$. Esto es que todo valor entre $f(a)$ y $f(b)$ es la imagen de al menos un valor en el intervalo $[a,b]$. En caso de que $f(a)$ y $f(b)$ tengan signos opuestos, el valor cero sería un valor intermedio entre $f(a)$ y $f(b)$, por lo que con certeza existe un  $p\in [a,b]$ que cumple  $f(p)=0$. De esta forma, se asegura la existencia de al menos una solución de la ecuación $f(x)=0$.
+\par Es también un algoritmo de búsqueda de raíces o ceros en funciones reales, que trabaja dividiendo un intervalo dado a la mitad y seleccionando el subintervalo que tiene la raíz. Suele requerir más iteraciones para alcanzar la tolerancia deseada que el método Newton Raphson descrito anteriormente, además de conocer de antemano el intervalo donde se encuentra la raíz deseada, su ventaja es que en funciones continuas se puede garantizar su convergencia.
