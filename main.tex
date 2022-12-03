@@ -10,6 +10,10 @@
 \usepackage{enumitem}
 \usepackage{multirow}
 \usepackage{array}
+\usepackage{float}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage[belowskip=-5pt,aboveskip=10pt]{caption}
 % \usepackage{hyperref}
 
 % estilo de las referencias
@@ -19,10 +23,10 @@
 
 \autor{Esteban de Jesús Rafael Camargo Rodríguez}
 \usbid{11-10145}
-\titulo{Diseño de un simulador instruccional para ingenieros y operadores de hornos de proceso}
+\titulo{Desarrollo de un simulador de adiestramiento para ingenieros y operadores de hornos de proceso}
 \tutor{Antonio Cavero N.}
 \usarcotutor
-\cotutor{Euler Jimenez G.} 
+\cotutor{Euler Jiménez G.} 
 \trabajo{Proyecto de grado}
 \coord{Ingeniería Química}
 \grado{Ingeniero Químico}
@@ -52,9 +56,12 @@
 \input{dedicatoria}
 \input{agradecimientos}
 \begin{resumen}
-    \par El conocimiento al operar un equipo en cualquier planta de ingeniería siempre ha sido algo fundamental, pero hay ocasiones en que el conocimiento práctico se queda corto y no basta con saber manipularlo físicamente, si no también conocer los principios fundamentales detrás del funcionamiento del equipo. Los hornos de procesos en refinerías industriales son equipos que aportan mas de un 80\% de la energía del proceso, y por tanto fundamentales, además son complejos de automatizar con sistemas de control por lo que requieren de fuertes bases para su correcta manipulación, adicional a esto, la eficiencia en manipular este equipo repercute directamente en la eficiencia global del proceso, afectando la cantidad de residuos liberados al ambiente.
-    \par Teniendo esto en cuenta se diseñó este proyecto para generar un simulador con interfaz web, capaz de transmitir de manera efectiva los principios y consecuencias del manejo del horno de procesos.
-    \par El objetivo de la herramienta es encargarse de simular las posibles interacciones de un operador con el equipo, representando diferentes estados asociados con las variables manipulables, con su uso los operadores podrán tener una referencia de como cambiará el proceso dependiendo de las variables que decidan alterar, las cuales pueden ser el flujo del residuo de vacío (crudo), las temperaturas de entrada o salida de este crudo, la abertura o cierre de los ductos de alimentación de aire (representado en exceso de aire) o salida de gases de chimenea, humedad relativa del ambiente, factores de ensuciamiento, pérdidas de calor al ambiente y por último los componentes del combustible suministrado al horno.\\
+    \par La habilidad de operar hornos de proceso es algo fundamental en cualquier planta del sector petrolero, pero, el conocimiento práctico no es suficiente; no basta con saber modificar su condición de operación, sino que también es necesario conocer los principios físicos que determinan el funcionamiento del equipo para lograr optimizar el proceso.
+    \par Teniendo esto en cuenta, se concibió este proyecto con el objetivo de desarrollar un simulador, que ayude a transmitir de manera efectiva estos principios en la operación de un horno, a través de la simulación del comportamiento térmico del horno frente a las posibles variaciones de las condiciones operacionales; lo que permite que los usuarios puedan tener una referencia de cómo cambia el proceso dependiendo de las variables que se modifiquen.
+    \par El horno usado en la simulación es una unidad de tiro natural, tipo cabina, con serpentín radiante horizontal. Su diseño se realizó tomando como referencia el horno de una unidad de destilación a vacío existente en una refinería.
+    \par Las variables abiertas a modificación en la interfaz de entrada son: el flujo del fluido de proceso, las temperaturas de entrada o salida del fluido, el exceso de aire o el porcentaje de oxígeno en los gases de combustión, la humedad relativa y temperatura del aire ambiental, los factores de ensuciamiento, las pérdidas de calor del horno al ambiente y, por último, los componentes del gas combustible. Las principales variables calculadas son el consumo de combustible, la cantidad de CO$_2$ generado, la eficiencia térmica y las condiciones de temperatura en las diferentes zonas del horno.
+    \par Se ofrecen tres opciones de resultados: la primera, donde se puede comparar un resumen de los resultados de dos condiciones de operación; la segunda, donde se observan, en detalle, todos los resultados de una condición de operación; la tercera, donde se puede optar por graficar separadamente las tendencias de seis variables de salida con respecto a cuatro variables de entrada.
+    \par El simulador está disponible en el siguiente enlace: \url{https://e-usb.github.io/heater}\\
      \vspace{10pt}\\
      Palabras claves: Horno de proceso, Fired heater, Combustión, Intercambiador, Simulador.
 \end{resumen}
@@ -62,21 +69,23 @@
 \listoffigures
 \listoftables
 \useacronyms
-%\input{notacion}
+\input{notacion}
 
+\setlength{\parskip}{6px}
 \mainmatter
 \input{introduccion}
 \input{cap-1}
 \input{cap-2}
 \input{cap-3}
 \input{cap-4}
-%\input{edu_acron}
+\input{cap-5}
+\input{cap-6}
 \input{conclusiones}
+\input{recomendaciones}
 \nocite{*}
 \bibliography{referencias}
 \appendix
 \input{apendice-a}
 \input{apendice-b}
 \input{apendice-c}
-
 \end{document}

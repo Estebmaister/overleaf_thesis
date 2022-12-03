@@ -1,12 +1,13 @@
-\chapter*{Conclusiones y Recomendaciones}
+\chapter*{Conclusiones}
 
-\par Como conclusión principal del trabajo desarrollado se tiene una herramienta completamente funcional en un rango aceptable para la industria y a disposición pública siguiendo este enlace web (\url{https://e-usb.github.io/heater}).
+\begin{itemize}
+    \item Se desarrollo exitosamente un modelo capaz de simular la operación de hornos de proceso, enfocado al adiestramiento de ingenieros y operadores, y con el objetivo de aumentar la eficiencia de estos equipos para disminuir el consumo de combustibles fósiles y generar menos gases de efecto invernadero.
 
-\par Al integrar las ecuaciones de transferencia de calor y conservación de energía en un algoritmo que intenta reproducir el comportamiento de un equipo tan complejo, se evidenció la tendencia a divergir de los métodos de cálculo aproximado y la importancia de afinar los valores iniciales en dichos métodos.
-
-\par La disponibilidad de simuladores en este campo es muy limitada, siendo el enfoque de las ingenierías estudiar los procesos modernos, se nota la necesidad de mejorar el currículum de estudio para incluir tecnologías libres que permitan desarrollar y continuar perfeccionando herramientas de este estilo, destinadas a facilitar el aprendizaje de procesos complejos.
-
-\par 
-Las simulaciones realizadas mostraron coherencia física con cada caso planteado.
-Fue posible validar los resultados de las simulaciones mediante comparaciones.
-Diferencia entre realidad computacional y proceso real con todas las variables.
+    \item El modelo integra las ecuaciones de transferencia de calor y conservación de masa y energía en un algoritmo que simula el comportamiento de un horno, se comprobó su estabilidad para reportar los resultados del proceso en el rango de las variables de operación establecidas.
+    
+    \item El simulador para adiestramiento de hornos de proceso es una herramienta de disposición pública y de código abierto, que refiere parámetros confiables y prácticos para el uso académico o industrial dentro de las características mecánicas establecidas. El acceso directo se encuentra siguiendo el enlace (\url{https://e-usb.github.io/heater}).
+    
+    \item Fue posible validar los resultados de las simulaciones mediante comparaciones con programas comerciales, e igualmente, las tendencias de estos resultados mostraron coherencia física en cada caso planteado dentro de las condiciones de diseño.
+    
+    \item Como todo simulador, siempre existe la posibilidad de aumentar su alcance, por ejemplo, se pueden incluir ecuaciones empíricas para calcular la formación de CO y NOx, o adicionalmente, desarrollar un modelo que relacione la posición del dámper con la entrada del aire al al horno.
+\end{itemize}

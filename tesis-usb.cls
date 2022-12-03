@@ -515,7 +515,7 @@
 %      \global\let\juradotres\relax%--
 }%--
 \newcommand*\chaptermark[1]{}
-\setcounter{secnumdepth}{2}
+\setcounter{secnumdepth}{3}
 \newcounter {part}
 \newcounter {chapter}
 \newcounter {chaptert}%---
