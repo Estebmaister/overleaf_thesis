@@ -1,5 +1,5 @@
 \chapter{Descripción del algoritmo}
-\par En este capítulo se describe el algoritmo desarrollado para la resolución de ecuaciones que definen el proceso de transferencia de calor en cada sección del horno, haciendo referencia los métodos numéricos utilizados y descritos en los anexos. También se describen las características físicas del horno a simular.
+\par En este capítulo se describe el algoritmo desarrollado para la resolución de ecuaciones que definen el proceso de transferencia de calor en cada sección del horno, haciendo referencia los métodos numéricos utilizados y descritos en el Apéndice \ref{apx:met}. También se describen las características físicas del horno a simular.
 
 \section{Algoritmo}
 \par El diagrama mostrado en la Figura \ref{fig:diagrama-algo}, representa la secuencia del algoritmo. Consta de un ciclo externo que incluye una sección de combustión, sección de radiación, sección de escudo y sección de convección. Su descripción será desarrollada en las subsecciones consiguientes.
@@ -13,7 +13,7 @@
 
 \par Datos iniciales no editables en el simulador:
 \begin{itemize}
-    \item Dimensiones del horno y configuración de los tubos en la cámara de combustión.
+    \item Dimensiones del horno y configuración de los tubos en la sección de radiación.
     \item Propiedades físicas y dimensiones de los tubos y aletas.
 \end{itemize}
 \par Datos de entrada modificables en la interfaz de usuario:
@@ -34,9 +34,9 @@
 $t_1$ y $t_2$ son la temperatura del fluido a la entrada y salida del horno respectivamente.\\
 Y $\mu_1$ y $\mu_2$ son la viscosidad del fluido a la entrada y salida del horno respectivamente.
 \subsection{Sección de combustión}
-\par En esta sección del algoritmo se realizan los cálculos de la composición del gas de combustión, sus propiedades físico-químicas y el poder calorífico del combustible; a través del balance de masa y energía a partir los componentes del combustible y considerando combustión completa.
+\par En esta sección del algoritmo se realizan los cálculos de la composición de los gases de combustión, sus propiedades físico-químicas y el poder calorífico del combustible; a través del balance de masa y energía a partir los componentes del combustible y considerando combustión completa.
 \par Las propiedades físico-químicas calculadas son, la capacidad calorífica específica, peso molecular, viscosidad y conductividad térmica.
-\par En el simulador se programaron funciones cuadráticas con dependencia en la temperatura para obtener la viscosidad y conductividad de los componentes del gas de combustión, los coeficientes para cada una de las propiedades se obtuvieron con los datos del Instituto Nacional de Estándares y Tecnología (NIST)\cite{nist}, y son alojados en una base de datos interna del simulador, el código desarrollado para las ecuaciones se muestra en los apéndices.
+\par En el simulador se programaron funciones cuadráticas con dependencia en la temperatura para obtener la viscosidad y conductividad de los componentes de los gases de combustión, los coeficientes para cada una de las propiedades se obtuvieron con los datos del Instituto Nacional de Estándares y Tecnología (NIST)\cite{nist}, y son alojados en una base de datos interna del simulador, el código desarrollado para las ecuaciones se muestra en el Apéndice \ref{apx:code}.
 \par Al ser sistemas multicomponentes, las propiedades son la suma de las propiedades individuales por sus fracciones molares correspondientes.
 \begin{gather}
     Propiedad_{sustancia} = \Sigma Propiedad_{i} * x_i \\
@@ -70,7 +70,7 @@ $Q_{calc} = Q_{RAD} + Q_{ESC} + Q_{CONV}$; calculado por los modelos de transfer
 \par En esta zona se deben determinar tres variable desconocidas: El calor cedido al fluido $Q_{RAD}$, la temperatura de entrada del fluido a esta zona $T_{fer}$ y la temperatura efectiva de los gases de combustión $T_g$.
 
 \par \textbf{Suposición A}: El valor de la temperatura de entrada del fluido a esta sección resulta de suponer inicialmente una absorción del calor del horno en la zona radiante igual al 70\%$Q_{absorbido}$; el resto es distribuido entre la zona escudo y zona convectiva, en consecuencia (ec. \ref{eq:sup-a}):
-\begin{equation}\label{eq:sup-a} Q_{RAD} = 0.7 * Q_{absorbido} \end{equation}
+\begin{equation}\label{eq:sup-a} Q_{RAD} = 0,7 * Q_{absorbido} \end{equation}
 \par El $Q_{RAD}$ supuesto corresponde al valor inicial de un procedimiento de ensayo y error que cierra con al obtener un calor transferido, $Q_{calc}$, ($Q_{RAD} + Q_{ESC} + Q_{CONV}$) igual al calor requerido $Q_{absorbido}$. A partir de $Q_{RAD}$ se pueden estimar las siguientes variables:
 \begin{itemize}
     \item De la ecuación (\ref{eq:rad-fluid}) se obtiene la temperatura de entrada del fluido a la zona radiante $T_{fer}$ y con este valor se calcula la temperatura promedio del fluido en la zona $T_b$.
@@ -86,8 +86,8 @@ $Q_{calc} = Q_{RAD} + Q_{ESC} + Q_{CONV}$; calculado por los modelos de transfer
 \par En este volumen de control se conocen tres variables: la temperatura de salida del fluido en esta zona $T_{fer}$, la temperatura de entrada de los gases de combustión $T_{gr}$ = $T_g$ y la cantidad de calor por radiación que escapa hacia la zona escudo $Q_{radEsc}$. Son incógnitas la temperatura de salida del gas $T_{ge}$, la temperatura de entrada del fluido $T_{fee}$ y el calor total transferido al fluido en la zona $Q_{ESC}$.
 \par \textbf{Suposición B}: Se supone la temperatura de entrada del fluido de la zona escudo $T_{fee}$. Con base en la suposición A, el resto del calor ($\approx$ 30\%) se transfiere al fluido en las zona escudo y convectiva, si se considera que en el escudo se absorbe el calor por radiación que escapa de la zona radiante lo que en cierta forma compensa la menor área de transferencia en comparación con la zona convectiva, como una razonable aproximación (ec. \ref{eq:sup-b}), se supone que la mitad del calor restante a transferir al fluido se da en esta sección:
 \begin{equation}\label{eq:sup-b}\begin{gathered}
-    Q_{ESC} \approx Q_{CONV} \approx 0.15 * Q_{absorbido}\\
-    Q_{ESC_{sup}} = 0.15 * Q_{absorbido} 
+    Q_{ESC} \approx Q_{CONV} \approx 0,15 * Q_{absorbido}\\
+    Q_{ESC_{sup}} = 0,15 * Q_{absorbido} 
 \end{gathered}\end{equation}
 \par Esto conlleva a un valor inicial para el ensayo-error de $T_{fee}$ = ($T_{fer}$ +$T_{fe}$)/2. 
 \begin{itemize}

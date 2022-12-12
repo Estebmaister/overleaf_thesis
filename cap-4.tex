@@ -33,12 +33,12 @@
 \end{center}
 \end{figure}
 
-\subsubsection{Condiciones de operación de diseño}
+\subsubsection{Condiciones de operación de diseño mostradas}
 \par En esta vista se detallan las condiciones de diseño, como se muestra a continuación:
 \begin{itemize}
-    \item \textbf{Diseño}: 23.0 MW (78.79 MMBtu/h) - Máxima capacidad de procesamiento recomendada.
-    \item \textbf{Normal}: 20.9 MW (71.5 MMBtu/h) [90,75\% del Diseño] - Operación habitual del horno.
-    \item \textbf{Turndown}*: 10.45 MW (35.77 MBtu/h) [45,4\% del Diseño] - Condición mínima de operación.
+    \item \textbf{Diseño}: 23,0 MW (78,79 MMBtu/h) - Máxima capacidad de procesamiento recomendada.
+    \item \textbf{Normal}: 20,9 MW (71,5 MMBtu/h) [90,75\% del Diseño] - Operación habitual del horno.
+    \item \textbf{Turndown}*: 10,45 MW (35,77 MBtu/h) [45,4\% del Diseño] - Condición mínima de operación.
 \end{itemize}
 \par *No equivale a una condición de ``turndown'' de los quemadores puesto que podría lograrse con cierto número de quemadores operando normalmente y otros quemadores simplemente apagados.
 
@@ -46,71 +46,56 @@
 \par En esta sección se desarrollan dos vistas:
 \begin{itemize}
     \item La primera, que se accede al pulsar el botón \textbf{DATOS} en la barra de navegación, es una vista simplificada para introducir solo los datos más relevantes del proceso. Al accionar el cálculo dirige al usuario a una pantalla de resultados donde se pueden comparar dos estados de operación (ver Fig. \ref{fig:datos}).
-    \item La segunda, que se accede estando en la sección de ingreso de datos simplificada al pulsar el botón \textbf{+DATOS} en la barra de navegación. En esta vista se encuentran todas las variables que permite modificar el proceso (ver Fig. \ref{fig:fulldatos}) y permite la posibilidad de accionar el cálculo para ofrecer una página de resultados extendidos. Adicionalmente se pueden accionar la generación de las curvas de tendencia escogiendo una variable a ser modificada al final de la página y pulsando el botón de graficar.
 \end{itemize}
-\begin{figure}[H]
-\begin{center}
+\begin{figure}[H] \begin{center}
 \includegraphics[scale=0.3]{images/datos}
 \caption[Página de ingreso de datos para comparación]{Referencia a página de ingreso de datos utilizada para accionar el cálculo en la vista comparativa de resultados.}
-\label{fig:datos}
-\end{center}
-\end{figure}
-\begin{figure}[hbt]
-\begin{center}
+\label{fig:datos} \end{center} \end{figure}
+\begin{itemize}
+    \item La segunda, que se accede estando en la sección de ingreso de datos simplificada al pulsar el botón \textbf{+DATOS} en la barra de navegación. En esta vista se encuentran todas las variables que permite modificar el proceso (ver Fig. \ref{fig:fulldatos}) y permite la posibilidad de accionar el cálculo para ofrecer una página de resultados extendidos. Adicionalmente se pueden accionar la generación de las curvas de tendencia escogiendo una variable a ser modificada al final de la página y pulsando el botón de graficar.
+\end{itemize}
+\begin{figure}[H] \begin{center}
 \includegraphics[scale=0.3]{images/datos2}
 \caption[Página de ingreso de datos extendida]{Referencia a página de ingreso de datos extendida, con la opción de accionar la vista de resultados extendidos o la generación de gráficas de tendencia.}
 \label{fig:fulldatos}
-\end{center}
-\end{figure}
+\end{center} \end{figure}
 \par En ambas se puede modificar la composición molar del combustible al pulsar la opción ``editar'', como se muestra en la Figura \ref{fig:edit_fuel}:
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.6]{images/edit_fuel}
+\begin{figure}[H] \begin{center} \includegraphics[scale=0.6]{images/edit_fuel}
 \caption[Opción para editar el combustible]{Opción para editar el combustible al ingresar los datos.}
-\label{fig:edit_fuel}
-\end{center}
+\label{fig:edit_fuel} \end{center} \end{figure}
 \par Un ejemplo de los campos abiertos para la edición de la composición del combustible se puede apreciar en la Figura \ref{fig:edit_fuel_ext}:
-\end{figure}
-\begin{figure}[hbt]
-\begin{center}
+\begin{figure}[hbt] \begin{center}
 \includegraphics[scale=0.45]{images/edit_fuel_ext}
 \caption[Campos para editar la composición del combustible]{Campos para editar la composición del combustible.}
-\label{fig:edit_fuel_ext}
-\end{center}
-\end{figure}
+\label{fig:edit_fuel_ext} \end{center} \end{figure}
 
 \subsection{Resultados comparativos}
 \par Esta vista es el resultado de accionar el cálculo en la sección de ingreso de datos simplificada. Posee el mayor potencial educativo, al resumir todas las variables resultantes y hacer una comparación entre dos condiciones de operación (Fig. \ref{fig:resultados}).
 \par Aquí se pueden observar directamente los cambios en variables de interés, como los datos de ingreso, las emisiones de dióxido de carbono, el consumo de combustible, la distribución de calor dentro del horno, la temperatura de salida de los gases de combustión y la eficiencia térmica.
 \par La recomendación para su uso es modificar solo una variable a la vez para su correcta interpretación.
-\begin{figure}[H]
-\begin{center}
+\begin{figure}[H] \begin{center}
 \includegraphics[scale=0.3]{images/result}
-\caption[Página comparativa de resultados]{Referencia a página comparativa de resultados, donde se pueden detallar los cambios de un estado a otro en la operación del horno.}
-\label{fig:resultados}
-\end{center}
-\end{figure}
+\caption[Página comparativa de resultados]
+{Referencia a página comparativa de resultados, donde se pueden detallar los cambios de un estado a otro en la operación del horno.}
+\label{fig:resultados} \end{center} \end{figure}
 
 \subsection{Resultados extendidos}
 \par Esta vista es el resultado de accionar el cálculo en la sección de ingreso de datos extendidos. Aquí se detallan todas las variables resultantes por cada sección del horno (Fig. \ref{fig:fullresultados}), se puede escoger el sistema de unidades a expresarse en la pantalla anterior, se uso extensamente al depurar las ecuaciones internas del algoritmo para encontrar sus puntos críticos y corregirlos.
-\par El objetivo de esta vista es tener una visión del comportamiento de todas las variables en el proceso, de aquí se pueden encontrar explicaciones no tan obvias del comportamiento de las variables finales mostradas en la vista comparativa.
-\begin{figure}[H]
-\begin{center}
+\begin{figure}[H] \begin{center}
 \includegraphics[scale=0.3]{images/result2}
 \caption[Página extendida de resultados]{Referencia a página extendida de resultados, en ella se pueden observar a detalle las variables internas del proceso simulado.}
-\label{fig:fullresultados}
-\end{center}
-\end{figure}
+\label{fig:fullresultados} \end{center} \end{figure}
+\par El objetivo de esta vista es tener una visión del comportamiento de todas las variables en el proceso, de aquí se pueden encontrar explicaciones no tan obvias del comportamiento de las variables finales mostradas en la vista comparativa.
 
 \subsection{Gráficas}
 \par Esta página es pensada para los usuarios más curiosos, y para futuras modificaciones del algoritmo o extensión de sus rangos (ver Figura \ref{fig:graficas}).
 \begin{figure}[H]\begin{center}
-\includegraphics[scale=0.23]{images/graficas.png}
+\includegraphics[scale=0.36]{images/graficas.png}
 \caption[Página de gráficas]{Referencia de la página de gráficas, aquí se muestran las tendencias de las variables resultantes escogidas en el rango de variación determinado por el usuario.}
 \label{fig:graficas} \end{center} \end{figure}
 \par Para acceder a esta vista se debe accionar la opción de graficar ubicada al final de la página de ingreso de datos extendidos.
 \par Su propósito es generar una visual del comportamiento del horno simulado a lo largo de un rango seleccionado, se usó para conseguir zonas donde los métodos aproximados del simulador no convergían y permitió sintonizar el paso, numero de iteraciones, valor inicial y tolerancia de dichos métodos.
-\par Aquí se pueden comprobar las tendencias, la continuidad y la estabilidad de las variables resultantes; también facilita la comprensión de los resultados de los fenómenos dentro del horno.
+\par En esta vista se pueden comprobar las tendencias, la continuidad y la estabilidad de las variables resultantes; también facilita la comprensión de los resultados de los fenómenos dentro del horno.
 
 \section{Despliegue del simulador en la web}
 \par En el apartado ``PROYECTO'' de la barra de navegación en la interfaz, mostrado en la Figura \ref{fig:navbar}, se puede acceder al repositorio del proyecto, ubicado en GitHub, servidor que aloja el software del simulador y lo mantiene en línea.
