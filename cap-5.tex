@@ -3,7 +3,7 @@
 
 \section{Descripción del horno simulado}
 \par Se seleccionó un horno de tiro natural, tipo cabina con dos pasos de serpentines horizontales para el fluido, de fuego directo simple tal como se muestra en la Figura \ref{fig:diagrama-vista}.
-\par Esta basado en el horno de una unidad de destilación al vacío de una refinería en operación. El residuo atmosférico, por tratarse de un fluido proveniente de la unidad de destilación atmosférica puede considerarse que la vaporización dentro del serpentín de tubos es muy baja y no se toma en cuenta en los cálculos.
+\par Está basado en el horno de una unidad de destilación al vacío de una refinería en operación. El residuo atmosférico, por tratarse de un fluido proveniente de la unidad de destilación atmosférica puede considerarse que la vaporización dentro del serpentín de tubos es muy baja y no se toma en cuenta en los cálculos.
 \par Utilizando las condiciones de operación de la hoja de datos del horno de referencia, se estableció la condición de operación del horno simulado como se muestra en la Tabla \ref{tbl:capacidad}.
 \begin{table}[H] \centering
 \caption[Condición de operación de diseño del horno]
@@ -58,7 +58,7 @@ N° de pasos del fluido		& 2	        & 2	            & 2	            \\
 N° de tubos total    		& 42		& 16			& 40			\\
 N° de tubos por fila		& 2			& 8				& 8				\\
 Espesor de pared de tubos, cm	& 0,818		& 0,711			& 0,711			\\
-Diámetro interno de tubos, cm	& 7,981		& 16,827		& 16,827		\\
+Diámetro interno de tubos, cm	& 17,981	& 16,827		& 16,827		\\
 Espaciado de tubos, cm  	& 40,640	& 				& 				\\
 Espaciado transversal, cm  	&			& 30,480		& 30,480		\\
 Espaciado longitudinal, cm 	&			& 30,480		& 30,480		\\
@@ -70,7 +70,7 @@ Altura de aletas, cm		&			& 				& 2,438			\\
 Espesor de aletas, cm		&			& 				& 0,152			\\
 Densidad de aletas, aleta/m	&			& 				& 196,850		\\
 \end{tabular} \end{center} \end{table}
-\par La conductividad térmica de los tubos se calcula a traves de la ecuación:
+\par La conductividad térmica de los tubos se calcula a través de la ecuación:
 \begin{equation}
 k_w = (14,643 + 1,64e-2*T - 2e-6*T^2)*3,6 \quad [kJ/h.m^{\circ} C)]
 \end{equation}

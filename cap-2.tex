@@ -1,7 +1,7 @@
 \chapter{Fundamentos teóricos y modelo matemático}
 
-\par En este capítulo se presentan los conceptos teóricos, modelos matemáticos y algoritmos en el desarrollo del trabajo y realizar los cálculos que se describen luego en la sección de metodología.
-\par En primer lugar se define un horno de proceso, se describe los tipos de hornos, sus componentes y las secciones generales que componen estos hornos. Por último, se presentan las ecuaciones necesarias para simular los fenómenos en cada sección del horno.
+\par En este capítulo se presentan los conceptos teóricos, modelos matemáticos y algoritmos utilizados en el desarrollo del trabajo y para la realización los cálculos que se describen luego en la sección de metodología.
+\par En primer lugar se define un horno de proceso, se describen los tipos de hornos, sus componentes y las secciones generales que componen estos hornos. Por último, se presentan las ecuaciones necesarias para simular los fenómenos en cada sección del horno.
 
 \section{Hornos de procesos}
 \par Un horno de proceso es un intercambiador de calor de fuego directo que utiliza los gases calientes de la combustión para elevar la temperatura de una corriente que fluye a través de un serpentín de tubos alineados en todo el equipo.
@@ -41,10 +41,10 @@ Los hornos de proceso son utilizados como \cite{bib:thermox}:
 \subsubsection{Sección radiante}
 \begin{figure} \begin{center}
 \includegraphics[scale=0.38]{images/horno}
-\caption[Secciones de un horno]{Secciones de un horno de cabina.\cite{bib:thermox}}
+\caption[Secciones de un horno]{Secciones de un horno de cabina \cite{bib:thermox}}
 \label{fig:horno} \end{center} \end{figure}
 \par La zona radiante, o cámara de combustión, posee un revestimiento interno de material refractario, aquí se transfiere entre 60 y 70\% del calor requerido por el fluido.
-\par En esta zona se ubica el haz de tubos lisos, por donde pasa el fluido, expuestos directamente a la radiación de la llama de combustión. Este puede ser de uno, dos, o mas pasos para la distribución del fluido.
+\par En esta zona se ubica el haz de tubos lisos, por donde pasa el fluido, expuestos directamente a la radiación de la llama de combustión. Este puede ser de uno, dos, o más pasos para la distribución del fluido.
 \par También se encuentran los siguientes componentes:
 \par \textbf{Carcasa}: son las paredes externas de acero del horno el cual encierra la sección de radiación del horno; por la alta temperatura de las paredes refractarias internas, en esta zona se pierde entre 1 y 5\% del calor de combustión al ambiente.
 \par \textbf{Los quemadores}: es donde se realiza la mezcla de aire-combustible para luego atomizarlo y vaporizarlo para su posterior combustión. Se pueden ubicar en diferentes zonas de la sección de radiación, pueden ser de piso, techo, laterales o pared.
@@ -55,7 +55,7 @@ Los hornos de proceso son utilizados como \cite{bib:thermox}:
 
 \subsubsection{Sección de escudo}
 \par Estos tubos están expuestos a radiación directa de la llama proveniente de la sección de radiación, y la transferencia de calor en esta zona a los tubos es aproximadamente 50\% por mecanismo de radiación y 50\% por convección. Suelen ser tubos del mismo diámetro que la sección de convección con la diferencia que estos siempre son lisos.
-\par La medición del tiro debajo de esta sección (diferencias de presión entre la cámara de combustión y la atmósfera), es muy importante ya que determina la correcta configuración el horno. Este lugar también es ideal para medir el oxígeno de los gases de combustión y las partes por millón (ppm) de combustibles.
+\par La medición del tiro debajo de esta sección (diferencia de presión entre la cámara de combustión y la atmósfera), es muy importante ya que determina la correcta configuración el horno. Este lugar también es ideal para medir el oxígeno de los gases de combustión y las partes por millón (ppm) de combustibles.
 
 \subsubsection{Sección convectiva}
 \par Los tubos de esta zona están fuera del alcance de la radiación de la llama de combustión y suelen presentar aletas. La transferencia de calor es en su mayoría por convección y los tubos se encuentran perpendiculares al flujo de gas.
@@ -63,7 +63,7 @@ Los hornos de proceso son utilizados como \cite{bib:thermox}:
 \par También existen hornos sin área de convección, aunque éstos suelen tener una baja eficiencia y temperaturas de salida de los gases de combustión de alto riesgo operacional.
 
 \subsubsection{Recuperación de gases de combustión}
-El colector (“breeching” en ingles), existente principalmente en los hornos de hogar individual (cabina o cilíndrico) corresponde a la sección de transición entre el extremo rectangular de la sección convectiva con el extremo circular de la chimenea. Es un volumen vacío.
+El colector (“breeching” en inglés), existente principalmente en los hornos de hogar individual (cabina o cilíndrico) corresponde a la sección de transición entre el extremo rectangular de la sección convectiva con el extremo circular de la chimenea. Es un volumen vacío.
 
 \subsubsection{Chimenea}
 \par Es un conducto cilíndrico de acero, que permite la salida a la atmósfera de los gases de combustión del horno. Las chimeneas de los hornos modernos son revestidas con material refractario moldeable.
@@ -83,22 +83,22 @@ El colector (“breeching” en ingles), existente principalmente en los hornos 
 \end{enumerate}
 \begin{figure}[hbt] \begin{center}
 \includegraphics[scale=0.30]{images/hornos_tipos}
-\caption[Tipos de hornos por diseño mecánico]{Clasificación de hornos según su diseño mecánico.\cite{kumar}}
+\caption[Tipos de hornos por diseño mecánico]{Clasificación de hornos según su diseño mecánico \cite{kumar}}
 \label{fig:hornos_tipos}
 \end{center} \end{figure}
 
 \subsection{Clasificación de los hornos por la ubicación de los quemadores}
-\par Los quemadores se pueden instalar en el piso, las paredes o el techo de la sección radiante y la llama puede dirigirse hacia arriba, hacia los lados o hacia abajo. 
-\par Los quemadores montados en la pared, con llama horizontalmente, pueden estar ubicados en la pared de fondo o en la pared lateral. Los quemadores de la pared de fondo producen llamas horizontales dirigidas a lo largo de la sección radiante. Los quemadores de pared lateral dirigen las llamas a lo ancho de la sección radiante \cite{kumar}. (ver Figura \ref{fig:quemadores})
+\par Los quemadores (ver Figura \ref{fig:quemadores}) se pueden instalar en el piso, las paredes o el techo de la sección radiante y la llama puede dirigirse hacia arriba, hacia los lados o hacia abajo. 
+\par Los quemadores montados en la pared, con llama horizontalmente, pueden estar ubicados en la pared de fondo o en la pared lateral. Los quemadores de la pared de fondo producen llamas horizontales dirigidas a lo largo de la sección radiante. Los quemadores de pared lateral dirigen las llamas a lo ancho de la sección radiante \cite{kumar}.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.30]{images/quemadores}
-\caption[Disposición de los quemadores]{Disposición de los quemadores.\cite{kumar}}
+\caption[Disposición de los quemadores]{Disposición de los quemadores \cite{kumar}}
 \label{fig:quemadores}
 \end{center}
 \end{figure}
 
-\subsection{Clasificación de los hornos por el tiro (Draft)}
+\subsection{Clasificación de los hornos por el tiro (``Draft'')}
 \par La diferencia entre la presión atmosférica y la presión del hogar (sección de radiación), se denomina tiro \cite{bib:draft}. El tiro es el resultado del flujo ascendente de los gases calientes dentro del horno debido a su menor densidad con respecto a densidad del aire atmosférico. Existen las siguientes clasificaciones de tiro para los distintos hornos.
 \begin{enumerate}
     \item Tiro natural: es la configuración donde la columna caliente de gases en la chimenea y el horno provee la succión que atrae al aire para combustión al horno.
@@ -114,15 +114,16 @@ El colector (“breeching” en ingles), existente principalmente en los hornos 
 \par De la reacción química de combustión, del combustible seleccionado para el proceso, se libera el calor que luego es transferido al fluido dentro del horno.
 
 \subsection{Combustión estequiométrica}
-\par La combustión se da en la salida de los quemadores, espacio donde se mezcla el combustible con el oxígeno, normalmente extraído de una corriente de aire ambiental, cuya composición seca se aproxima en este proyecto a 20,95\% de oxígeno y 79,05\% de nitrógeno. Como ejemplo de esta reacción balanceada se puede observar la ecuación \ref{eq:combustion}, donde se usa metano como combustible, los moles de nitrógeno provienen de la relación volumétrica entre los compuestos del aire teórico seco 79,05/20,95 = 3,77.
+\par La combustión se da en la salida de los quemadores, espacio donde se mezcla el combustible con el oxígeno, normalmente extraído de una corriente de aire ambiental, cuya composición seca se aproxima en este proyecto a 20,95\% de oxígeno y 79,05\% de nitrógeno. 
+\par Como ejemplo de esta reacción balanceada se puede observar la ecuación \ref{eq:combustion}, donde se usa metano como combustible, los moles de nitrógeno provienen de la relación volumétrica entre los compuestos del aire teórico seco 79,05/20,95 = 3,77.
 \begin{equation}
     \label{eq:combustion}
     CH_4 + 2O_2 + 2(3,77)N_2 \rightarrow CO_2 + 2H_2O + 7,52N_2
 \end{equation}
-\par La mínima cantidad de aire que puede suministrar oxígeno suficiente para una reacción completa es llamado aire teórico. En la practica, la combustión completa no será lograda a menos que el aire suministrado sea mayor a 100\% del aire teórico, y cualquier valor superior es llamado exceso de aire.
-\par Un parámetro importante, usualmente usado para expresar la relación de aire y combustible es la relación aire/combustible (designada como AC, ec. \ref{eq:ac}). Usualmente expresada en base másica, pero puedo encontrarse en base molar, como se muestra en la ecuación \ref{eq:ac}.
-\begin{gather}
-\label{eq:ac}
+\par La mínima cantidad de aire que puede suministrar oxígeno suficiente para una reacción completa es llamado aire teórico.
+\par En la practica, la combustión completa no será lograda a menos que el aire suministrado sea mayor a 100\% del aire teórico, y cualquier valor superior es llamado exceso de aire.
+\par Un parámetro importante, usado para expresar la relación de aire y combustible es la relación aire/combustible (designada como AC, ec. \ref{eq:ac}). Usualmente expresada en base másica, pero puedo encontrarse en base molar, como se muestra en la ecuación \ref{eq:ac}.\\
+\begin{gather} \label{eq:ac}
     AC_{masa} = \frac{m_{a}}{m_{c}}\\
     AC_{molar} = \frac{n_{a}}{n_{c}}
 \end{gather}
@@ -132,14 +133,14 @@ El colector (“breeching” en ingles), existente principalmente en los hornos 
     AC_{masa} = \frac{m_{a}}{m_{c}} =
     \frac{n_{a}*PM_{a}}{n_{c}*PM_{c}} = AC_{molar}*\frac{PM_{a}}{PM_{c}}
 \end{equation}
-\par Donde, $m$ es la masa, $PM$ el peso molecular, $n$ el número de moles y los subíndices $_a,_c$ corresponden al aire y el combustible respectivamente.
+\par Donde, $m$ es la masa, $PM$ el peso molecular, $n$ el número de moles y los subíndices $_a,_c$ corresponden al aire y el combustible, respectivamente.
 
 \subsection{Exceso de aire de combustión}
-\par En un proceso de combustión real, la cantidad de aire se expresa como una fracción de la cantidad teórica. Una relación similar, denominada relación de equivalencia, es igual a la relación aire-combustible real dividida por la relación aire-combustible teórica, de la forma:
+\par En un proceso de combustión real, la cantidad de aire se expresa como una fracción de la cantidad teórica. Una relación similar, denominada relación de equivalencia, es igual a la proporción aire-combustible real dividida por la relación aire-combustible teórica, de la forma:
 \begin{equation}
     \Phi = AC_{te\acute{o}rica}/AC
 \end{equation}
-\par Dado que el porcentaje teórico de aire y la relación de equivalencia vienen de la relación aire-combustible estequiométrica y la relación aire-combustible real, las masas moleculares se anulan y son las mismas ya sea que se utilice una base de masa o de mol.
+\par Dado que el porcentaje teórico de aire y la relación de equivalencia vienen de la proporción aire-combustible estequiométrica y la relación aire-combustible real, las masas moleculares se anulan y son las mismas ya sea que se utilice una base de másica o molar.
 \par Así, 150\% de aire teórico significa que el aire suministrado es 1,5 veces el aire teórico. La combustión completa de metano con 150\% de aire teórico, habiendo balanceado todos los coeficientes estequiométricos de conservación de todos los átomos, se escribe:
 \begin{equation}
 CH_4 + 1,5*2(O_2 + 3,77N_2 ) \rightarrow CO_2 + 2H_2O + O_2 + 11,28N_2
@@ -158,13 +159,13 @@ CH_4 + 1,1*2(O_2 + 3,77N_2) \rightarrow CO_2 + 2H_2O + ,2O_2 + 8,27N_2 + ppmCO +
 \par Incrementar el exceso de aire reduce la temperatura de la llama y disminuye la eficiencia térmica del horno. Cuanto más exceso de aire, más oxígeno hay disponible para producir NO$_x$. Por el contrario, cuanto menos oxígeno, menos posibilidades de formación de NOx y aumento en la formación de CO (ver Fig. \ref{fig:nox}).
 \begin{figure}[H] \begin{center}
 \includegraphics[scale=0.42]{images/nox}
-\caption[Reducción del NO$_x$ al disminuir el exceso de aire de combustión]{Reducción del NO$_x$ al disminuir el exceso de aire.\cite{bib:thermox}}
+\caption[Reducción del NO$_x$ al disminuir el exceso de aire de combustión]{Reducción del NO$_x$ al disminuir el exceso de aire \cite{bib:thermox}}
 \label{fig:nox} \end{center} \end{figure}
-\par De las emisiones de NOx producidas anualmente, 16\% se puede atribuir a la industria química/refinación, y los estrictos límites de emisión requieren un mayor control del NOx y otros componentes de la chimenea. Operar el horno con una eficiencia óptima, con bajo exceso de aire, es la forma más sencilla y menos costosa de reducir las emisiones de NOx \cite{bib:thermox}.
+\par De las emisiones de NOx producidas anualmente, 16\% se pueden atribuir a la industria química/refinación, y los estrictos límites de emisión requieren un mayor control del NOx y otros componentes de la chimenea. Operar el horno con una eficiencia óptima, con bajo exceso de aire, es la forma más sencilla y menos costosa de reducir las emisiones de NOx \cite{bib:thermox}.
 
 \subsection{Exceso de oxígeno en los gases de combustión}
 \par Un análisis de los productos de la combustión proporciona un método muy simple para calcular la cantidad real de aire suministrado en un proceso de combustión. Existen varios métodos experimentales mediante los cuales se puede realizar dicho análisis. Algunos arrojan resultados en base seca y otros procedimientos experimentales dan resultados que incluyen el vapor de agua. 
-\par El principio básico al utilizar el análisis de los productos de la combustión para obtener la relación aire-combustible real es la conservación de la masa de cada elemento. Por lo tanto, al cambiar de reactivos a productos, podemos hacer un balance de carbono, un balance de hidrógeno, un balance de oxígeno y un balance de nitrógeno (además de cualquier otro elemento que pueda estar involucrado).
+\par El principio básico al utilizar el análisis de los productos de la combustión para obtener la relación aire-combustible real es la conservación de la masa de cada elemento. Por lo tanto, al cambiar de reactivos a productos, se puede hacer un balance de carbono, un balance de hidrógeno, un balance de oxígeno y un balance de nitrógeno (además de cualquier otro elemento que pueda estar involucrado).
 \par Dentro de la combustión estequiométrica completa que se usa en el simulador, el exceso de aire puede obtenerse al definir un exceso de oxígeno y viceversa. 
 
 \subsection{Humedad del aire}
@@ -177,7 +178,7 @@ CH_4 + 1,1*2(O_2 + 3,77N_2) \rightarrow CO_2 + 2H_2O + ,2O_2 + 8,27N_2 + ppmCO +
 \begin{equation}
     p_s = 610,78 * e^{t/(t +238,3)*17,2694}
 \end{equation}
-\par Donde $t$ es la temperatura del aire en grados celcios, que puede ser corregida para temperas de congelación ( $<$ 0 ºC) como se muestra en la ecuación \ref{eq:ice}.
+\par Donde $t$ es la temperatura del aire en grados Celcius, que puede ser corregida para temperaturas de congelación ( $<$ 0 ºC) como se muestra en la ecuación \ref{eq:ice}.
 \begin{equation}
 \label{eq:ice}
     p_{s-hielo} = -4,86 + 0,855p_s + 0,000244p_s^2
@@ -192,12 +193,12 @@ CH_4 + 1,1*2(O_2 + 3,77N_2) \rightarrow CO_2 + 2H_2O + ,2O_2 + 8,27N_2 + ppmCO +
 \bar h_{RP} = \sum_P n_e(\bar h^0_f + \Delta \bar h)_e - \sum_R n_i(\bar h^0_f + \Delta \bar h)_i
 \end{gathered}
 \end{equation}
-\par La entalpía de combustión es habitualmente expresar por unidad de masa de combustible, kilogramo $(h_{RP})$ o kilomol $(\bar h_{RP})$ de combustible.
-\par Como la entalpía de formación es fija, podemos separar los términos como:
+\par La entalpía de combustión se expresa habitualmente por unidad de masa, kilogramo $(h_{RP})$ o kilomol $(\bar h_{RP})$ de combustible.
+\par Como la entalpía de formación es fija, se pueden separar los términos como:
 \begin{equation}
     H = H^0 + \Delta H
 \end{equation}
-\par Dónde
+\par Donde
 \begin{equation}
     H^0_{R} = \sum_R n_i \bar h^0_{fi} ; \quad \Delta H_{R} = \sum_R n_i \Delta \bar h_{i}
 \end{equation}
@@ -229,7 +230,7 @@ CH_4 + 1,1*2(O_2 + 3,77N_2) \rightarrow CO_2 + 2H_2O + ,2O_2 + 8,27N_2 + ppmCO +
 \end{equation}
 
 \subsection{Poder calorífico}
-\par El poder calorífico, o calor de reacción, representa el calor transferido desde una cámara durante la combustión o reacción a temperatura constante. En el caso de un proceso de presión constante, o de flujo constante, se deduce de la ecuación de la energía que es igual al negativo de la entalpía de combustión. Por esta razón, esta transferencia de calor a veces se denomina poder calorífico a presión constante para los procesos de combustión.
+\par El poder calorífico, o calor de reacción, representa el calor transferido desde una cámara durante la combustión o reacción a temperatura constante. En el caso de un proceso de presión constante, o de flujo constante, se deduce de la ecuación de la energía que es igual al valor negativo de la entalpía de combustión. Por esta razón, esta transferencia de calor a veces se denomina poder calorífico a presión constante para los procesos de combustión.
 \par Cuando se usa el término poder calorífico (CV, de sus siglas en inglés), se usan los términos poder calorífico superior e inferior (groso y neto). El poder calorífico superior (``gross calorific value'', GCV) es la transferencia de calor con agua líquida en los productos, y el poder calorífico inferior (``net calorific value'', NCV) es la transferencia de calor con agua vaporizada en los productos.
 \par La ecuación del energía para un flujo constante es ahora escrita como:
 \begin{gather}
@@ -279,10 +280,10 @@ $Q_{c} = \dot m_{c} * Cp_{c}(T) * (T_{c_e} - T_{ref})$\\
 $Q_{g} = \dot m_{g} * Cp_{g}(T) * (T_{g_c} - T_{ref})$\\
 $Q_{f} = \dot m_{f} * Cp_{f}(T) * (T_{f_s} - T_{f_e})$\\
 $Q_{perdidas} =$ Pérdidas de calor al ambiente por las paredes del horno.
-\par Como se pudo apreciar en la descripción de tipos de horno, el arreglo mecánico puede variar pero para fines de este análisis las tres zonas o volúmenes de control son: radiante, escudo y convectiva. 
+\par Como se pudo apreciar en la descripción de tipos de horno, el arreglo mecánico puede variar pero para fines del análisis de este trabajo las tres zonas o volúmenes de control son: radiante, escudo y convectiva. 
 \par El volumen de control radiante corresponde a la sección de radiación del horno, donde está presente la llama de la combustión.
 \par La división de la sección superior del horno se debe a que dos zonas presentan diferencias en los mecanismos de transferencia de calor; así, los tubos de la zona escudo reciben radiación luminosa directa de la llama, que no está presente en la zona convectiva.
-\par La zona de escudo en este análisis está formada por las dos primeras filas de tubos y son tubos lisos, mientras que la zona convectiva está conformada generalmente por tubos con aletas. En ambas zonas está presenta la radiación del gas y la reflectada de las paredes de la sección hacia los tubos. Esta radiación, de baja longitud de onda, deja de ser significativa por debajo de los 550 °C (1022 °F).
+\par La zona de escudo en este análisis está formada por las dos primeras filas de tubos y son tubos lisos, mientras que la zona convectiva está conformada generalmente por tubos con aletas. En ambas zonas está presente la radiación del gas y la reflectada de las paredes de la sección hacia los tubos. Esta radiación, de baja longitud de onda, deja de ser significativa por debajo de los 550 °C (1022 °F).
 \par Conociendo que la energía transferida al fluido de proceso es igual a:
 \begin{equation}
     \begin{gathered}
@@ -290,14 +291,15 @@ $Q_{perdidas} =$ Pérdidas de calor al ambiente por las paredes del horno.
     \quad\quad\quad\quad = \dot m_f * C_{p_f} * (T_{fs} - T_{fe})
     \end{gathered}
 \end{equation}
-\par Donde $Q_{RAD}, Q_{ESC}, Q_{CONV}$ son el calor que transfieren los gases de combustión al fluido en las zonas radiante, de escudo y convectiva respectivamente y que corresponde al servicio del horno, substituyendo en ecuación \ref{eq:balance-global}.
+\par Donde $Q_{RAD}, Q_{ESC}, Q_{CONV}$ son el calor que transfieren los gases de combustión al fluido en las zonas radiante, de escudo y convectiva, respectivamente y que corresponde al servicio del horno, sustituyendo en ecuación \ref{eq:balance-global}, resulta la ecuación \ref{eq:balance-global-mod}.
 \begin{equation}
+\label{eq:balance-global-mod}
     Q_{suministrado} + Q_{a} + Q_{c} = Q_{RAD} + Q_{ESC} + Q_{CONV} + Q_{perdidas} + Q_{g}
 \end{equation}
-\par Para cuantificar el balance del honor es necesario cuantificar los calores $Q_{RAD}$, $Q_{ESC}$, $Q_{CONV}$ y de esta forma:
+\par Para cuantificar el balance del horno es necesario considerar los calores $Q_{RAD}$, $Q_{ESC}$, $Q_{CONV}$ y de esta forma:
 \begin{enumerate}
     \item Calcular la cantidad de combustible requerido por el servicio, $Q_{suministrado}$.
-    \item Calcular el comportamiento del horno ante variaciones de las condiciones operacionales, tales como, cambios en: la composición de combustible, el exceso de aire, la cantidad de fluido que circula, el requerimiento de temperatura de salida del fluido, los factures de ensuciamiento, etc.
+    \item Calcular el comportamiento del horno ante variaciones de las condiciones operacionales, tales como, cambios en: la composición de combustible, el exceso de aire, la cantidad de fluido que circula, el requerimiento de temperatura de salida del fluido, los factores de ensuciamiento, etc.
 \end{enumerate}
 
 \subsection{Zona Radiante}
@@ -338,7 +340,7 @@ $h_c$ = Coeficiente convectivo de la zona radiante (W/m$^2$°C).
 \begin{equation}
     \dot m_g = \dot m_c * AC_{masa} + \dot m_c = \dot m_c (1 + AC_{masa})
 \end{equation}
-\par Substituyendo en las ecuaciones (\ref{eq:rad}) y (\ref{eq:rad-fluid}) se obtiene:
+\par Sustituyendo en las ecuaciones (\ref{eq:rad}) y (\ref{eq:rad-fluid}) se obtiene:
 \begin{equation}\label{eq:rad-tgr}
 \begin{gathered}
 \dot m_c*NCV + \dot m_a*C_{p_a} * (T_a -T_{ref}) 
@@ -402,7 +404,7 @@ h_{c} = 1,5 BTU/hr.ft^2.^{\circ}F \approx 8,5 W/m^2.^{\circ}C)
 \end{equation}
 
 \subsubsection{Área de plano frontal que reemplaza el área de los tubos $(Acp)_{RAD}$}
-\par Las superficies normales de absorción de calor en un horno consisten en una serie de tubos paralelos. En el caso de un diseño de hornos donde los tubos se reciben la llama desde un solo lado, los tubos normalmente se colocan frente a una pared refractaria. Parte de la radiación del gas caliente incide directamente en los tubos, mientras que el resto pasa a través de las hileras y se irradia de regreso a la cámara, donde parte es absorbida por los tubos al ser refractada en las paredes. En el caso de tubos expuestos desde ambos lados, por ejemplo, cuando los tubos están colocados en el centro de la cámara, los tubos absorben la radiación directa desde ambos lados. Expresar el área del tubo como un área plana equivalente simplifica este cálculo. El área de plano frontal calculada es el área de un plano a través de las líneas centrales del tubo, ya sea que estén en un plano curvo, como en un patrón cilíndrico o en una fila de lado a lado. Para la mayoría de los paneles de tubos, el ancho sería igual al espacio centro/centro de los tubos multiplicado por el número de tubos. La longitud efectiva es la longitud del tubo expuesto a la radiación. En el caso de tubos que penetran en una placa tubular, es la longitud entre placas tubulares. Pero para los tubos con las curvas de retorno dentro de la sección de radiación, la longitud puede tomarse como la distancia desde la línea central del retorno en un extremo hasta la línea central del retorno en el otro extremo.
+\par Las superficies normales de absorción de calor en un horno consisten en una serie de tubos paralelos. En el caso de un diseño de hornos donde los tubos reciben la llama desde un solo lado, los tubos normalmente se colocan frente a una pared refractaria. Parte de la radiación del gas caliente incide directamente en los tubos, mientras que el resto pasa a través de las hileras y se irradia de regreso a la cámara, donde parte es absorbida por los tubos al ser refractada en las paredes. En el caso de tubos expuestos desde ambos lados, por ejemplo, cuando los tubos están colocados en el centro de la cámara, los tubos absorben la radiación directa desde ambos lados. Expresar el área del tubo como un área plana equivalente simplifica este cálculo. El área de plano frontal calculada es el área de un plano a través de las líneas centrales del tubo, ya sea que estén en un plano curvo, como en un patrón cilíndrico o en una fila de lado a lado. Para la mayoría de los paneles de tubos, el ancho sería igual al espacio centro/centro de los tubos multiplicado por el número de tubos. La longitud efectiva es la longitud del tubo expuesto a la radiación. En el caso de tubos que penetran en una placa tubular, es la longitud entre placas tubulares. Pero para los tubos con las curvas de retorno dentro de la sección de radiación, la longitud puede tomarse como la distancia desde la línea central del retorno en un extremo hasta la línea central del retorno en el otro extremo.
 \par Para una sección de radiación con los tubos en el centro, u otro patrón que resulte en que los tubos estén expuestos a las llamas desde ambos lados, el área de plano frontal sería el doble del área proyectada.
 \par Para llama de un solo lado:
 \begin{equation}
@@ -418,12 +420,12 @@ $S_{tubo}$ = Espaciado de tubos. \\
 $L_{tubo}$ = Largo efectivo del tubo.
 
 \subsubsection{Factor de efectividad de absorción del banco de tubos $(\alpha)_{RAD}$}
-\par Debido al espaciamiento entre los tubos, el banco de tubos de la zona radiante no recibe todo el calor irradiado al área de plano frontal, $Acp$, por lo que un factor de efectividad de absorción, $\alpha$, es usado para corregir esta área y dependerá del arreglo de tubos. El factor de efectividad relativa se describe bajo las siguientes curvas:
-\par Para una fila de tubos simple frente a la pared refractaria, usar (Total One Row). Para dos filas de tubos frente a la pared refractaria, usar (Total Two Rows). Para hornos de llama a ambos lados, usar (Direct OneRow). Ver la Figura \ref{fig:alpha}.
+\par Debido al espaciamiento entre los tubos, el banco de tubos de la zona radiante no recibe todo el calor irradiado al área de plano frontal, $Acp$, por lo que un factor de efectividad de absorción, $\alpha$, es usado para corregir esta área y dependerá del arreglo de tubos. El factor de efectividad relativa se describe bajo las siguientes curvas (ver la Figura \ref{fig:alpha}):
+\par Para una fila de tubos simple frente a la pared refractaria, usar (``Total One Row''). Para dos filas de tubos frente a la pared refractaria, usar (``Total Two Rows''). Para hornos de llama a ambos lados, usar (``Direct OneRow'').
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.45]{images/alpha}
-\caption[Efectividad de absorción para banco de tubos]{Efectividad de absorción para banco de tubos.} 
+\caption[Efectividad de absorción para banco de tubos]{Efectividad de absorción para banco de tubos \cite{bib:mekler}}
 \label{fig:alpha}
 \end{center}
 \end{figure}
@@ -434,16 +436,16 @@ $L_{tubo}$ = Largo efectivo del tubo.
 \end{equation}
 
 \subsubsection{Factor global de transferencia radiante $(F)$}
-\par Debido a que los gases de combustión en el horno no son un medio ideal de radiación, la ecuación \ref{eq:radiac} debe ser corregida usando un factor de transferencia radiante, dependiente de la emisividad del gas y la relación del área refractaria de plano frontal. Como el calor de radiación es reflejado de regreso a los tubos, por refracción, un horno con mayor relación de superficie refractaria con respecto a la superficie de los tubos, absorberá mas calor. Como los tubos no absorben perfectamente el calor, las curvas se basan en superficies de tubos con absorción de 0,9, un valor considerado como típico para superficies de metales oxidados. El factor de transferencia radiante final puede ser tomado de la siguiente curva (Figura \ref{fig:f}) ofrecida por Mekler \& Fairall \cite{bib:mekler}.
+\par Debido a que los gases de combustión en el horno no son un medio ideal de radiación, la ecuación \ref{eq:radiac} debe ser corregida usando un factor de transferencia radiante, dependiente de la emisividad del gas y la relación del área refractaria de plano frontal. Como el calor de radiación es reflejado de regreso a los tubos, por refracción, un horno con mayor relación de superficie refractaria con respecto a la superficie de los tubos, absorberá más calor. Como los tubos no absorben perfectamente el calor, las curvas se basan en superficies de tubos con absorción de 0,9, un valor considerado como típico para superficies de metales oxidados. El factor de transferencia radiante final puede ser tomado de la siguiente curva (Figura \ref{fig:f}) ofrecida por Mekler \& Fairall \cite{bib:mekler}.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.45]{images/f}
-\caption[Factor de transferencia radiante, F]{Factor de transferencia radiante, F.\cite{bib:mekler}}
+\caption[Factor de transferencia radiante, F]{Factor de transferencia radiante, F \cite{bib:mekler}}
 \label{fig:f}
 \end{center}
 \end{figure}
 
-\par La relación, $Aw$/$\alpha Acp$, que aparece en el gráfico, es calculada con la ecuación \ref{eq:aw-acp}. El área de plano frontal efectiva, $\alpha Acp$, es el producto del factor de efectividad y del área de plano frontal como se describió anteriormente. Área refractaria efectiva se calcula con:
+\par La relación, $Aw$/$\alpha Acp$, que aparece en la Figura \ref{fig:f}, es calculada con la ecuación \ref{eq:aw-acp}. El área de plano frontal efectiva, $\alpha Acp$, es el producto del factor de efectividad y del área de plano frontal como se describió anteriormente. Área refractaria efectiva se calcula con:
 \begin{equation} \label{eq:aw}
 Aw = Ar - \alpha Acp
 \end{equation}
@@ -521,11 +523,11 @@ C	& -0,0062   & 0,1168	&-0,6473	&-0,154 \\
 
 
 \subsubsection{Emisividad de gases de combustión}
-\par La emisividad de los gases de combustión se aproxima por las curvas presentadas por Lobo y Evans \cite{bib:rad}, correlacionada como una función de la suma de las presiones parciales del vapor de agua y el dióxido de carbono (P $= p_{H_2O} + p_{CO_2}$), multiplicada por la longitud media del haz radiante producida (L $= MBL$), (PL, Ec. \ref{eq:pl}), y dependiente de la temperatura de los gases de combustión, Tg. Variaciones en la temperatura de pared de los tubos entre 600°F y 1200°F causan una desviación menor a 1\% de estas curvas.
+\par La emisividad de los gases de combustión se aproxima por las curvas presentadas por Lobo y Evans \cite{bib:rad}, correlacionada como una función de la suma de las presiones parciales del vapor de agua y el dióxido de carbono ($P = P_{H_2O} + P_{CO_2}$), multiplicada por la longitud media del haz radiante producida (L $= MBL$), (PL, Ec. \ref{eq:pl}), y dependiente de la temperatura de los gases de combustión, Tg. Variaciones en la temperatura de pared de los tubos entre 600 y 1200°F causan una desviación menor a 1\% de estas curvas.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.42]{images/emiss}
-\caption[Emisividad de gases de combustión]{Emisividad de gases de combustión.\cite{bib:mekler}}
+\caption[Emisividad de gases de combustión]{Emisividad de gases de combustión \cite{bib:mekler}}
 \label{fig:emiss}
 \end{center}
 \end{figure}
@@ -533,7 +535,7 @@ C	& -0,0062   & 0,1168	&-0,6473	&-0,154 \\
 \label{eq:pl}
 PL = (PH_2O + PCO_2) * MBL
 \end{equation}
-\par Donde $PH_2O$ y $PCO_2$ son las presiones parciales del agua y dióxido de carbono en el gas, y MBL en pies obtenido de la tabla \ref{tbl:mbl}.
+\par Donde $PH_2O$ y $PCO_2$ son las presiones parciales del agua y dióxido de carbono en el gas, y MBL en pies obtenido de la Tabla \ref{tbl:mbl}.
 \par A partir de la la Figura \ref{fig:emiss} se creó la Tabla \ref{tbl:pl}, con los valores extraídos de las curvas, y con la finalidad de obtener las funciones necesarias para calcular la emisividad en el simulador.
 \begin{table}[H]
 \caption{Emisividad de los gases de combustión a partir de PL y temperatura}
@@ -563,12 +565,12 @@ E = A + B*PL + C*PL^2 + D*\frac{PL^3}{10}
 \label{tbl:emisividad}
 \centering
 \begin{tabular}{c|c|c|c|c}		
-Temp.	    & A	        & B	        & C 	    & D     \\
+Temperatura ($^o$F) & A	 & B  & C       & D  \\
 \hline
-1.000 $^o$F	& 0,1194	& 0,2421	& -0,0448	& 0,0032\\
-1.400 $^o$F	& 0,0957	& 0,2293	& -0,0400	& 0,0027\\
-1.800 $^o$F	& 0,0819	& 0,2027	& -0,0326	& 0,0021\\
-2.000 $^o$F	& 0,0764	& 0,1871	& -0,0284	& 0,0018\\
+1.000    	& 0,1194 & 0,2421 & -0,0448	& 0,0032\\
+1.400       & 0,0957 & 0,2293 & -0,0400	& 0,0027\\
+1.800       & 0,0819 & 0,2027 & -0,0326	& 0,0021\\
+2.000       & 0,0764 & 0,1871 & -0,0284	& 0,0018\\
 \end{tabular}
 \end{table}
 
@@ -625,7 +627,7 @@ D	& -2,20E-10	& -7,20E-07	& 0,004165 \\
 \label{eq:esc}
 Q_{ESC} = Q_{ge} + Q_{radEsc} = \dot m_{f} *C_{p_f} *(T_{fer} - T_{fee})
 \end{equation}
-\par Donde $Q_{radEsc}$ es el calor por radiación que proviene directamente de la zona radiante hacia el escudo de tubos y que fue calculado al determinar la temperatura efectiva de radiación $T_g$. La temperatura de entrada del gas a la zona de escudo $T_{gr}$ es igual a la temperatura efectiva $T_g$, lo cual se infiere de haber supuesto una temperatura de mezcla ideal de los gases en la sección radiante. $T_{gr} = T_g$
+\par Donde $Q_{radEsc}$ es el calor por radiación que proviene directamente de la zona radiante hacia el escudo de tubos y que fue calculado al determinar la temperatura efectiva de radiación $T_g$. La temperatura de entrada del gas a la zona de escudo $T_{gr}$ es igual a la temperatura efectiva $T_g$, lo cual se infiere de haber supuesto una temperatura de mezcla ideal de los gases en la sección radiante, $T_{gr} = T_g$
 \par Rearreglando la ecuación \ref{eq:esc} se obtiene:
 \begin{equation}
 Q_{fs} - Q_{fe} = Q_{gr} - Q_{ge} + Q_{radEsc}
@@ -663,7 +665,7 @@ Sustituyendo (\ref{eq:qesc-lmtd}) en (\ref{eq:qesc})
 U_0  = 1 / \Sigma R \\
 \Sigma R = R_{ext} + R_{tubo} + R_{int}
 \end{gather*}
-\par Donde $R_{ext}, R_{tubo}, R_{int}$ son la resistencia externa de la pared del tubo, la resistencia interna del tubo y el factor de ensuciamiento interno respectivamente.
+\par Donde $R_{ext}, R_{tubo}, R_{int}$ son la resistencia externa de la pared del tubo, la resistencia interna del tubo y el factor de ensuciamiento interno, respectivamente.
 \par Sustituyendo:
 \begin{equation}
 \label{}
@@ -826,7 +828,7 @@ $s_f$ = Espaciado de aleta.
 C_5 = 0,7 +(0,70 -0,8 *e^{-0,15 *N_r^2}) *e^{-P_l/P_t}
 \end{equation}
 \par Donde, \\
-$N_r$ = Numero de tubos por fila. \\
+$N_r$ = Número de tubos por fila. \\
 $P_l$ = Paso de tubo longitudinal.\\
 $P_t$ = Paso de tubo transversal. \\
 
@@ -873,7 +875,7 @@ $A_0$ = Área de superficie externa total. \\
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.40]{images/gamma}
-\caption[Factor de radiación externo]{Factor de radiación externo. Este gráfico requiere de la temperatura promedio del gas y de la temperatura promedio de la superficie del tubo.\cite{bib:rad}}
+\caption[Factor de radiación externo]{Factor de radiación externo. Este gráfico requiere de la temperatura promedio del gas y de la temperatura promedio de la superficie del tubo \cite{bib:rad}}
 \label{fig:gamma}
 \end{center}
 \end{figure}

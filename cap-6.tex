@@ -1,4 +1,4 @@
-\chapter{Resultados}
+\chapter{Discusión de resultados}
 
 \section{Reacciones de combustión y requerimiento de aire}
 \par Al ejecutar el cálculo de combustión con los datos de composición de combustible y condiciones ambientales de las las Tablas \ref{tbl:combustible} y \ref{tbl:aire}, se obtuvieron los resultados mostrados en la Tabla \ref{tbl:combustion-data}. Adicionalmente, se generaron las composiciones molar y másica de los gases de combustión mostradas en la Tabla \ref{tbl:combustion-gas}.
@@ -26,9 +26,9 @@
 	Dióxido de azufre ($SO_2$)	& 0,000 	& 0,000	 \\
 \end{tabular} \end{center} \end{table}
 
-\par Para validar la confiabilidad de estos resultados del simulador se compararon con los obtenidos empleando el software comercial WinHeat\copyright\ para el diseño y evaluación de hornos, propiedad de Esteem Projects Pvt. Ltd., con una licencia autorizada para la versión 3.0. La conclusión de esta comparación arrojó que la diferencia entre los resultados de ambos simuladores para el cálculo de la combustión es menor a 0,1\%. 
+\par Para validar la confiabilidad de estos resultados del simulador se compararon con los obtenidos empleando el programa comercial WinHeat\copyright\ para el diseño y evaluación de hornos, propiedad de Esteem Projects Pvt. Ltd., con una licencia autorizada para la versión 3.0. La conclusión de esta comparación arrojó que la diferencia entre los resultados de ambos simuladores para el cálculo de la combustión es menor a 0,1\%. 
 \section{Simulación térmica del horno}
-\par Los datos específicos del fluido y condiciones de operación que quedan por definir se muestran en la siguiente Tabla \ref{tbl:props}:
+\par Los datos específicos del fluido y condiciones de operación que quedan por definir se muestran en la Tabla \ref{tbl:props}.
 \begin{table}[htb]\begin{center}
 \caption[Datos del fluido y condiciones de operación]{Datos del fluido y condiciones de operación}
 \label{tbl:props}\begin{tabular}{l|c|c}
@@ -89,7 +89,7 @@ P$_{CO_2}$+P$_{H_2O}$, atm 		    & 0,249 & 0,250 \\
 
 \subsection{Validación en la sección de escudo}
 \par En esta sección la variación de temperatura del residuo concuerda entre ambos simuladores, con una diferencia no mayor a 0,1\%, en cambio la diferencia en la temperatura de los gases de combustión incrementa, haciendo que la diferencia de temperatura media logarítmica aumente significativamente.
-\par Esto se puede atribuir a un mayor coeficiente de transferencia global convectiva reportado por Winheat\copyright, ya que el coeficiente de convección interno es aproximadamente igual en ambos simuladores la diferencia proviene del coeficiente de convección externo que no es reportado por el simulador de referencia.
+\par Esto se puede atribuir a un mayor coeficiente de transferencia global convectivo reportado por Winheat\copyright, ya que el coeficiente de convección interno es aproximadamente igual en ambos simuladores la diferencia proviene del coeficiente de convección externo que no es reportado por el simulador de referencia.
 \begin{table}[H] \begin{center}
 \caption[Resultados de la zona escudo]{Comparación de resultados de la zona escudo.}
 \label{tbl:compara-ze} \begin{tabular}{l|c|c}
@@ -190,7 +190,7 @@ Emisiones de CO$_2$ al ambiente, toneladas/año	& 49,006  & no reporta \\
 \end{enumerate}
 
 \subsection{Variación de la carga del horno}
-\par En la secuencia de Figuras \ref{fig:graph-t_out-fuel}, \ref{fig:graph-t_out-arc}, \ref{fig:graph-t_out-chim}, \ref{fig:graph-t_out-dist}, \ref{fig:graph-t_out-efic} y \ref{fig:graph-t_out-emi} se puede apreciar el cambio de las seis variables resultantes con la variación de la temperatura de salida del residuo (lo que es equivalente a aumentar la carga del horno), cuyas tendencias son equivalentes a aumentar el cantidad de fluido que circula.
+\par En la secuencia de Figuras \ref{fig:graph-t_out-fuel}, \ref{fig:graph-t_out-arc}, \ref{fig:graph-t_out-chim}, \ref{fig:graph-t_out-dist}, \ref{fig:graph-t_out-efic} y \ref{fig:graph-t_out-emi} se puede apreciar el cambio de las seis variables resultantes con la variación de la temperatura de salida del residuo (lo que se traduce en aumentar la carga del horno), cuyas tendencias son equivalentes a aumentar el cantidad de fluido que circula.
 \par En las gráficas de la interfaz del simulador se pueden observar puntos rojos representan los valores calculados por el simulador, unidos por una línea azul que dibuja la curva de la tendencia seleccionada; en el rango del eje de las abscisas se presenta la variable de entrada escogida.
 \par En la Figura \ref{fig:graph-t_out-fuel}, se grafica el flujo de combustible variando la temperatura del fluido. Se observa el incremento el flujo de combustible necesario para cumplir con el aumento de la carga del horno.
 \begin{figure}[H]\begin{center}
@@ -234,7 +234,7 @@ Emisiones de CO$_2$ al ambiente, toneladas/año	& 49,006  & no reporta \\
 \caption[Curvas de tendencia para la variación de exceso de aire]
 {Curvas de tendencia para la variación de exceso de aire.}
 \label{fig:exceso-aire} \end{center} \end{figure}
-\par Comportamiento y tendencias similares se observan cuando se varia la humedad relativa en el aire de alimentación. Con lo que se tiene una referencia de la tendencia en todas las variables abiertas para graficar.
+\par Comportamiento y tendencias similares se observan cuando se varía la humedad relativa en el aire de alimentación. Con lo que se tiene una referencia de la tendencia en todas las variables abiertas para graficar.
 
 \section{Resultados del modo comparativo}
 \par Este modo de la interfaz del simulador permite observar vis a vis los parámetros de dos condiciones de operación del horno, una condición Base y otra Modificada. Esta presentación posibilita comparar los cambios en las variables proceso y analizar las causas de los cambios registrados en los resultados operacionales.
@@ -284,7 +284,7 @@ Poder Calorífico Bruto (GCV),  kJ/kg   &50,268 &52,814 \\
 \end{tabular}
 \end{table}
 
-\par En la Tabla \ref{tbl:comparison-r} se detallan uno a uno los resultados del caso Base y Modificado, de manera semejante a como se muestra en la interfaz web del simulador. Dentro de los resultados,vresaltan, la disminución del flujo de combustible en 3,5\% y, consecuentemente, de las emisiones de CO$_2$ en 10,8\%, lo que se debe directamente al incremento de la proporción de hidrógeno en el combustible para la operación modificada del horno, y, finalmente, el incremento de la eficiencia térmica.
+\par En la Tabla \ref{tbl:comparison-r} se detallan uno a uno los resultados del caso Base y Modificado, de manera semejante a como se muestra en la interfaz web del simulador. Dentro de los resultados, resaltan, la disminución del flujo de combustible en 3,5\% y, consecuentemente, de las emisiones de CO$_2$ en 10,8\%, lo que se debe directamente al incremento de la proporción de hidrógeno en el combustible para la operación modificada del horno, y, finalmente, el incremento de la eficiencia térmica.
 \begin{table}[H]
 \caption{Resultados del modo comparativo del simulador}
 \label{tbl:comparison-r} \centering \begin{tabular}{l|c|c}
@@ -329,7 +329,7 @@ Eficiencia Térmica @ NHV, \%  &79,90 &80,18 \\
 \end{tabular} \end{table}
 \par Esta comparación parte del supuesto de que el incremento del porcentaje de hidrógeno en el combustible puede ser manejado satisfactoriamente por los quemadores.
 
-\par Otra comparación, resumida en la Tabla \ref{tbl:comparison-air}, al modificar únicamente el exceso de aire, de 20\% a 40\%, se observa: aumento en el consumo de combustible en 3,4\%, aumento en las emisiones de CO$_2$ en 3,6\%, aumento en el flujo de gases de combustión en 16,9\% y disminución en la eficiencia térmica de 2,9\%. 
+\par Otra comparación, resumida en la Tabla \ref{tbl:comparison-air}, al modificar únicamente el exceso de aire, de 20 a 40\%, se observa: aumento en el consumo de combustible en 3,4\%, alza en las emisiones de CO$_2$ en 3,6\%, incremento en el flujo de gases de combustión en 16,9\% y disminución en la eficiencia térmica de 2,9\%. 
 \par Estos resultados se deben al consumo de energía térmica por parte del aire adicional suministrado al horno. Energía que no es transferida, subsiguientemente, al residuo atmosférico y que eventualmente se pierde por la chimenea. Evidenciando la importancia de esta variable en el proceso.
 \begin{table}[H]
 \caption{Resumen de comparación de aumento de exceso de aire en condiciones de diseño}

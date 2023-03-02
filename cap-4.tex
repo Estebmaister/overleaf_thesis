@@ -2,7 +2,7 @@
 \par En este capítulo se describe la interfaz gráfica diseñada para interactuar con el simulador, consistente en pantallas de introducción de datos y pantallas para mostrar los resultados del simulador. Adicionalmente, se describe la plataforma usada para alojar el simulador en la web.
 
 \section{Interfaz de usuario (UI)}
-\par Una interfaz de usuario (UI, abreviación comúnmente usada en inglés) es el medio por el cual una persona interactúa con una aplicación de software o dispositivo de hardware. Esto significa que el programa incluye controles gráficos que optimizan la experiencia de usuario usando un ratón, teclado o pantalla táctil.
+\par Una interfaz de usuario (UI, abreviación comúnmente usada en inglés) es el medio por el cual una persona interactúa con una aplicación de programa (``software'') o dispositivo de ``hardware''. Esto significa que el programa incluye controles gráficos que optimizan la experiencia de usuario usando un ratón, teclado o pantalla táctil.
 \par Los elementos más comunes de una interfaz gráfica de usuario, de acuerdo con Career Foundry \cite{ui}, son:
 \begin{itemize}
 \item Controles de entrada: permiten introducir información en el sistema por parte de los usuarios.
@@ -10,28 +10,27 @@
 \item Componentes informativos: brindan información a los usuarios.
 \item Contenedores: mantienen el contenido organizado, como paneles, ventanas, marcos, etc.
 \end{itemize}
-\par Sin la interfaz de usuario, el algoritmo, aunque poderoso, tendría un uso muy limitado por la complejidad que implica correrlo directamente como un programa y por lo difícil que es observar los cambios sin una amigable visualización de datos.
+\par Sin la interfaz de usuario, el algoritmo, aunque poderoso, tendría un uso muy limitado por la complejidad que implica correrlo directamente como un programa y por lo difícil que es observar los cambios sin una visualización amigable de los datos.
 \par La interfaz de usuario implementada para el algoritmo se desarrolló usando los lenguajes básicos de desarrollo web: Lenguaje de Marcado de Hipertexto (HTML), Hojas de Estilo en Cascada (CSS) y el lenguaje de programación interpretado JavaScript (JS), lo que hace que sea totalmente editable y pueda correr en cualquier ordenador o dispositivo móvil con navegador web sin instalar otro programa. 
 \par La interfaz desarrollada consiste en un sitio web donde el usuario puede navegar a distintas vistas con diferentes propósitos. A continuación se describirán dichas vistas y sus aplicaciones pensadas, esencialmente las posibilidades educativas que ofrece la comparación de dos estados del proceso, pero no limitadas a estas.
 
 \subsection{Descripción de uso y alcances}
 \par Al ingresar al enlace del simulador, la vista de bienvenida otorga instrucciones y limitaciones de uso del simulador, al ser la vista principal el usuario podrá conocer todas las capacidades y aplicaciones disponibles en la versión actual publicada (ver la Figura \ref{fig:alcance}).
 \par Aquí se describen las condiciones de operación de diseño establecidas para dar una referencia al usuario de las cargas que puede manejar el horno simulado dentro de los rangos sugeridos de uso.
-\begin{figure}[H]
-\begin{center}
+
+\par La sección de usos y alcance describe como utilizar la barra de navegación del sitio web (ver Figura \ref{fig:navbar}), como editar el combustible a utilizar en las diferentes vistas de ingreso de datos y finalmente como usar la sección de gráficas o tendencias.
+
+\begin{figure}[H] \begin{center}
 \includegraphics[scale=0.33]{images/alcance}
 \caption[Página de alcances]{Referencia a página de alcances, vista introductoria a la aplicación web.}
 \label{fig:alcance}
-\end{center}
-\end{figure}
-\par La sección de usos y alcance describe como utilizar la barra de navegación del sitio web (ver Figura \ref{fig:navbar}), como editar el combustible a utilizar en las diferentes vistas de ingreso de datos y finalmente como usar la sección de gráficas o tendencias.
-\begin{figure}[H]
-\begin{center}
+\end{center} \end{figure}
+
+\begin{figure}[H] \begin{center}
 \includegraphics[scale=0.22]{images/navbar}
 \caption[Barra de navegación]{Barra de navegación de la interfaz web.}
 \label{fig:navbar}
-\end{center}
-\end{figure}
+\end{center} \end{figure}
 
 \subsubsection{Condiciones de operación de diseño mostradas}
 \par En esta vista se detallan las condiciones de diseño, como se muestra a continuación:
@@ -94,11 +93,11 @@
 \caption[Página de gráficas]{Referencia de la página de gráficas, aquí se muestran las tendencias de las variables resultantes escogidas en el rango de variación determinado por el usuario.}
 \label{fig:graficas} \end{center} \end{figure}
 \par Para acceder a esta vista se debe accionar la opción de graficar ubicada al final de la página de ingreso de datos extendidos.
-\par Su propósito es generar una visual del comportamiento del horno simulado a lo largo de un rango seleccionado, se usó para conseguir zonas donde los métodos aproximados del simulador no convergían y permitió sintonizar el paso, numero de iteraciones, valor inicial y tolerancia de dichos métodos.
+\par Su propósito es generar una visual del comportamiento del horno simulado a lo largo de un rango seleccionado, se usó para conseguir zonas donde los métodos aproximados del simulador no convergían y permitió sintonizar el paso, número de iteraciones, valor inicial y tolerancia de dichos métodos.
 \par En esta vista se pueden comprobar las tendencias, la continuidad y la estabilidad de las variables resultantes; también facilita la comprensión de los resultados de los fenómenos dentro del horno.
 
 \section{Despliegue del simulador en la web}
-\par En el apartado ``PROYECTO'' de la barra de navegación en la interfaz, mostrado en la Figura \ref{fig:navbar}, se puede acceder al repositorio del proyecto, ubicado en GitHub, servidor que aloja el software del simulador y lo mantiene en línea.
+\par En el apartado ``PROYECTO'' de la barra de navegación en la interfaz, mostrado en la Figura \ref{fig:navbar}, se puede acceder al repositorio del proyecto, ubicado en GitHub, servidor que aloja el programa del simulador y lo mantiene en línea.
 \par GitHub es una plataforma de alojamiento de código para el control de versiones y la colaboración. Permite trabajar de forma individual o en equipos para desarrollar proyectos con acceso desde cualquier lugar con conexión a internet.
 \par Adicionalmente permite publicar sitios web estáticos, que no requieran manejo de base de datos en la nube o procesamiento de datos a nivel del servidor, para proyectos de código abierto.
 \par Se usó esta ventajosa función para hacer el simulador accesible desde cualquier navegador y se encuentra disponible en el siguiente enlace: \url{https://e-usb.github.io/heater}
